@@ -56,7 +56,7 @@ Increased compliance: IDP can help organizations to meet regulatory requirements
 - **Free up human resources:** IDP can free up human resources to focus on more strategic tasks, such as developing new products or services.
 
 
-### How bytelab.ai can help with IDP?
+### How Synax.ai can help with IDP?
 
 <br>
 
@@ -65,9 +65,9 @@ Increased compliance: IDP can help organizations to meet regulatory requirements
 - tailored to the specific needs of our customers. We work with each customer to understand their specific requirements and then develop a solution that meets those requirements.
 - easy to use and scalable, and they can help businesses to improve their efficiency, accuracy, and compliance.
 
-We do not store any user data. When you use Bytelab services, all your data remains private and belongs solely to you. 
+We do not store any user data. When you use Synax services, all your data remains private and belongs solely to you. 
 
-If you are looking for a way to automate the processing of documents, bytelab.ai can help.
+If you are looking for a way to automate the processing of documents, Synax.ai can help.
 
 ### Conclusion
 IDP is a powerful technology that can help businesses to improve their efficiency, accuracy, and compliance. If you are looking for a way to automate your document processing, IDP is a great option to consider.

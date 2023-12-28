@@ -77,7 +77,7 @@ The use of AI in the Indian legal industry is still in its early stages, but it 
 
 
 
-**ByteLab.AI's** target is to bring the speed of technology to the legal industry. In India, there are over 50 million cases pending in court, and we believe that a significant amount of time is wasted on repetitive and administrative tasks. Manual paper handling and e-discovery are also major challenges and time sinks.
+**Synax.AI's** target is to bring the speed of technology to the legal industry. In India, there are over 50 million cases pending in court, and we believe that a significant amount of time is wasted on repetitive and administrative tasks. Manual paper handling and e-discovery are also major challenges and time sinks.
 
 As a result, we provide an AI-powered solution for the legal industry that allows lawyers to work more efficiently. Our AI can automate manual, repetitive tasks, freeing up lawyers to focus on more complex matters. Our AI can also analyze contracts and provide insights, saving lawyers even more time.
 
