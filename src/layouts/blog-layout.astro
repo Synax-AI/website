@@ -1,0 +1,83 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <section id="single-post" class="pb-90 inner-page-hero blog-page-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- SINGLE POST CONTENT -->
+        <div class="col-xl-10">
+          <div class="post-content">
+            <!--  SINGLE POST TITLE -->
+            <div class="single-post-title text-center">
+              <!-- Title -->
+              <h2 class="s-46 w-700 mb-1">
+                {frontmatter.title}
+              </h2>
+              <!-- Post Tag -->
+              {
+                frontmatter.tags.map((tag) => (
+                  <span class="post-tag color--black">{tag}</span>
+                ))
+              }
+              <!-- Post Meta -->
+              <div class="blog-post-meta mt-35">
+                <ul class="post-meta-list ico-10">
+                  <li><p class="p-md w-500">By {frontmatter.author}</p></li>
+                  <li class="meta-list-divider">
+                    <p>
+                      <span class="flaticon-minus"></span>
+                    </p>
+                  </li>
+                  <li><p class="w-500">ByteLab.AI</p></li>
+                  <li class="meta-list-divider">
+                    <p><span class="flaticon-minus"></span></p>
+                  </li>
+                  <li>
+                    <p class="p-md">{frontmatter.pubDate}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- END SINGLE POST TITLE -->
+
+            <!-- SINGLE POST IMAGE -->
+            <div class="blog-post-img py-50">
+              <img
+                class="img-fluid r-16"
+                src={frontmatter.image.url}
+                alt={frontmatter.image.alt}
+              />
+              <div class="text-center">
+                <small>
+                  <a target="_blank" href={frontmatter.image.attribution.url}
+                    >{frontmatter.image.attribution.text}</a
+                  ></small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!-- SINGLE POST CONTENT -->
+            <div class="col-xl-9">
+              <!-- SINGLE POST TEXT -->
+              <div class="single-post-txt">
+                <slot />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- DIVIDER LINE -->
+  <hr class="divider" />
+</Layout>
+
+<style>
+  ul{
+    list-style: disc !important;
+  }
+</style>

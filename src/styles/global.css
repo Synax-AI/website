@@ -1,0 +1,43 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.h-link {
+  position: relative;
+  transition: -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease;
+  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+.h-link:hover span::before,
+.h-link:focus span::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.h-link span {
+  position: relative;
+  display: inline-block;
+}
+.h-link span.active {
+  color: #0071e3;
+}
+.h-link span::before {
+  position: absolute;
+  content: attr(data-content);
+  color: #0071e3;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #0071e3;
+  text-decoration-color: #0071e3;
+  -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  transition: -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease;
+  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+.height-50vh{
+  height: 50vh!important;
+}
+
+.single-post-txt ul {
+  list-style: disc !important;
+  padding-left: 2rem!important;
+}

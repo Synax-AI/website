@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+---
+
+<Layout title="Blog - ByteLab">
+	
+	<section id="blog-page" class="pb-60 inner-page-hero blog-page-section">
+		<div class="container">
+		{
+			allPosts.map((post) => (
+				
+			<div class="blog-post wide-post wow fadeInUp">
+				<div class="row d-flex align-items-center">
+					<!-- BLOG POST IMAGE -->
+					<div class="col-md-6">
+						<div class="blog-post-img">
+							<img
+								class="img-fluid r-16"
+								src={post.frontmatter.image.url}
+								alt={post.frontmatter.image.alt}
+							/>
+						</div>
+					</div>
+
+					<!-- BLOG POST TEXT -->
+					<div class="col-md-6">
+						<div class="blog-post-txt">
+							<!-- Post Tag -->
+							{
+								post.frontmatter.tags.map((tag) => (
+								<span class="post-tag color--black">{tag}</span>
+								))
+							}
+							<!-- Post Link -->
+							<h3 class="s-38 w-700">
+								<a href={post.url}
+									>{post.frontmatter.title}
+								</a>
+							</h3>
+
+							<!-- Text -->
+							<p>
+								{post.frontmatter.description}
+							</p>
+
+							<!-- Post Meta -->
+							<div class="blog-post-meta mt-30">
+								<ul class="post-meta-list ico-10">
+									<li><p class="w-500">By {post.frontmatter.author}</p></li>
+									<li class="meta-list-divider">
+										<p>
+											<span class="flaticon-minus"></span>
+										</p>
+									</li>
+									<li><p class="w-500">ByteLab.AI</p></li>
+									<li class="meta-list-divider">
+										<p>
+											<span class="flaticon-minus"></span>
+										</p>
+									</li>
+									<li><p>{post.frontmatter.pubDate}</p></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- END BLOG POST TEXT -->
+				</div>
+				<!-- End row -->
+			</div>
+			))
+		}
+		</div>
+	</section>
+
+
+	<!-- DIVIDER LINE -->
+	<hr class="divider" />
+</Layout>
