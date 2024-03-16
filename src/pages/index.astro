@@ -15,20 +15,26 @@ import Layout from "../layouts/Layout.astro";
 
             <!-- Text -->
             <p class="p-lg">
-              No time for annual reports? Ask Shagun about companies, and he'll
-              provide answers straight from the reports
+              Ask Shagun about companies, and it will provide answers straight
+              from annual reports
             </p>
-
-            <!-- Button -->
             <a
               href="#banner-7"
               class="btn r-04 btn--theme hover--tra-black"
               data-bs-toggle="modal"
-              data-bs-target="#modal-3">Join Beta</a
+              data-bs-target="#modal-3"
+              id="joinBetaButton"
             >
+              Join Beta
+            </a>
             <p class="p-sm btn-txt ico-15">
               Join our beta testing program help shape our platform, and make
               Shagun your investment buddy
+            </p>
+            <!-- Success Message -->
+            <p
+              class="p-sm btn-txt ico-15 request-form-success-msg text-success"
+            >
             </p>
           </div>
         </div>
@@ -49,8 +55,8 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <!-- End container -->
   </section>
-
 </Layout>
+
 <div
   id="modal-3"
   class="modal auto-off fade"
@@ -66,6 +72,7 @@ import Layout from "../layouts/Layout.astro";
         class="btn-close ico-10 white-color"
         data-bs-dismiss="modal"
         aria-label="Close"
+        
       >
         <span class="flaticon-cancel"></span>
       </button>
@@ -132,7 +139,7 @@ import Layout from "../layouts/Layout.astro";
                   </div>
 
                   <!-- Form Message -->
-                  <div class="col-md-12 request-form-msg">
+                  <div class="col-md-12">
                     <span class="loading"></span>
                   </div>
                 </form>
@@ -156,6 +163,7 @@ import Layout from "../layouts/Layout.astro";
     background-size: cover;
   }
 </style>
+
 <script>
   // Import the required modules
   import { CosmosClient } from "@azure/cosmos";
@@ -163,7 +171,20 @@ import Layout from "../layouts/Layout.astro";
   // Wait for the DOM to be ready
   document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
-    const form = document.querySelector("#modal-3 form");
+    const form = document.querySelector("#modal-3 form") as HTMLFormElement;
+
+    // Get the success message element
+    const successMessageElement = document.querySelector(
+      ".request-form-success-msg"
+    ) as HTMLParagraphElement;
+    // Get the "Join Beta" link and its accompanying text
+    const joinBetaButton = document.querySelector(
+      "#joinBetaButton"
+    ) as HTMLElement;
+    const joinBetaText = document.querySelector(
+      ".btn-txt.ico-15"
+    ) as HTMLElement;
+    const closeButton = document.querySelector(".btn-close") as HTMLButtonElement;
 
     // Add a submit event listener to the form
     form.addEventListener("submit", async function (event) {
@@ -219,7 +240,19 @@ import Layout from "../layouts/Layout.astro";
       // Log the created item
       console.log("Item created:", createdItem);
 
-      // You can perform further processing here
+      if (createdItem.name) {
+        closeButton.click();
+        // Show the success message
+        if (successMessageElement) {
+          successMessageElement.textContent =
+          "Your request has been received. Thank you! We will reach out to you soon.";
+        }
+        // Hide the join beta button and text
+        if (joinBetaButton && joinBetaText) {
+          joinBetaButton.style.display = "none";
+          joinBetaText.style.display = "none";
+        }
+      }
     });
   });
 </script>
