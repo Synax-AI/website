@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@azure/cosmos": "^4.0.0",
     "astro": "^2.5.6",
     "node": "^20.3.1"
   }

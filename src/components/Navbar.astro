@@ -2,7 +2,7 @@
 const currentPath = Astro.url.pathname.slice(1);
 ---
 
-<header id="header" class="tra-menu navbar-dark white-scroll">
+<header id="header" class="tra-menu navbar-dark light-hero-header white-scroll">
     <div class="header-wrapper">
         <!-- MOBILE HEADER -->
         <div class="wsmobileheader clearfix">
@@ -54,37 +54,7 @@ const currentPath = Astro.url.pathname.slice(1);
                                 ></a
                             >
                         </li>
-                        <li class="nl-simple">
-                            <a href="/about" class="h-link"
-                                ><span
-                                    class={currentPath === "about/"
-                                        ? "active"
-                                        : ""}
-                                    data-content="About">About</span
-                                ></a
-                            >
-                        </li>
-                        <li class="nl-simple">
-                            <a href="/services" class="h-link"
-                                ><span
-                                    class={currentPath === "services/"
-                                        ? "active"
-                                        : ""}
-                                    data-content="Services">Services</span
-                                ></a
-                            >
-                        </li>
-                        <li class="nl-simple">
-                            <a href="/blog" class="h-link"
-                                ><span
-                                    class={currentPath === "blog/"
-                                        ? "active"
-                                        : ""}
-                                    data-content="Blog">Blog</span
-                                ></a
-                            >
-                        </li>
-                    
+                
                         <li class="nl-simple">
                             <a href="/contacts" class="h-link"
                                 ><span
