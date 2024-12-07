@@ -3,157 +3,445 @@ import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Synax">
-  <section id="hero-15" class="bg--scroll hero-section blur--purple">
+<Layout title="Synax - Transforming Research into Practical Solutions.">
+  <section id="hero-15" class="bg--scroll hero-section blur--purple mt-45">
     <div class="container">
       <div class="row d-flex align-items-center">
-        <!-- HERO TEXT -->
-        <div class="col-md-6">
-          <div class="hero-15-txt wow fadeInRight">
-            <!-- Title -->
-            <h2 class="s-64 w-700">Shagun, your AI Investment Buddy 🤖!</h2>
-
-            <!-- Text -->
-            <p class="p-lg">
-              Ask Shagun about companies, and it will provide answers straight
-              from annual reports.
-            </p>
-            <a
-              href="#banner-7"
-              class="btn r-04 btn--theme hover--tra-black"
-              data-bs-toggle="modal"
-              data-bs-target="#modal-3"
-              id="joinBetaButton"
-            >
-              Join Beta
-            </a>
-            <p class="p-sm btn-txt ico-15">
-              Join our beta version to get early access to features and help us shape
-              Shagun as investment buddy that you will love.
-            </p>
-            <!-- Success Message -->
-            <p
-              class="p-sm btn-txt ico-15 request-form-success-msg text-success"
-            >
-            </p>
-          </div>
-        </div>
-        <!-- END HERO TEXT -->
-
-        <!-- HERO IMAGE -->
-        <div class="col-md-6">
-          <div class="hero-15-img text-center wow fadeInLeft">
+        <div class="col-md-6 pl-0">
+          <div class="hero-15-img text-center wow fadeInLeft pl-0">
             <img
-              class="img-fluid"
-              src="images/shagun/chat.svg"
+              class="img-fluid mx-w-140 pr-25 pt-0"
+              src="images/1.svg"
               alt="hero-image"
             />
           </div>
         </div>
+
+        <div class="col-md-6">
+          <div class="hero-15-txt wow fadeInRight px-50">
+            <h2 class="s-54 w-500">Invest Confidently with Shagun</h2>
+
+            <!-- <p class=" color--grey">
+              Shagun, your AI Investment Buddy 🤖! Ask Shagun about companies,
+              and it will provide answers straight from annual reports.
+            </p> -->
+            <form id="beta-form" class="quick-form form-shadow mt-45">
+              <!-- Form Inputs -->
+              <div class="input-group">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control email1 r-06 input-email"
+                  placeholder="Your email address"
+                  autocomplete="off"
+                  required
+                />
+                <span class="input-group-btn form-btn">
+                  <button
+                    type="submit"
+                    class="btn r-06 btn--theme hover--theme submit joinBetaButton1"
+                    >Join Beta</button
+                  >
+                </span>
+              </div>
+              <label for="email" class=" text-success" id="request-form-success-msg1"></label>
+
+              <!-- Form Message -->
+              <div class="quick-form-msg"><span class="loading"></span></div>
+            </form>
+            <p id="" class="p-sm btn-txt ico-15  text-success ">
+            </p>
+            <p class="color--black">
+              Be among the first to try Shagun, the AI-powered stock research
+              platform that makes investing simple and smart. <strong>
+                Join beta</strong
+              > and help us build the tool that you can love and trust.
+            </p>
+           
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FEATURES-2
+			============================================= -->
+  <section id="features-2" class="py-100 features-section division">
+    <div class="container">
+      <!-- SECTION TITLE -->
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-9">
+          <div class="section-title mb-80">
+            <!-- Title -->
+            <h2 class="s-48 w-700">Invest Smarter, Faster</h2>
+
+            <!-- Text -->
+            <p class="s-21 color--grey">
+              Researching Stocks Has Never Been Easier!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURES-2 WRAPPER -->
+      <div class="fbox-wrapper text-center">
+        <div class="row row-cols-1 row-cols-md-3">
+          <!-- FEATURE BOX #1 -->
+          <div class="col">
+            <div class="fbox-2 fb-1 wow fadeInUp">
+              <!-- Image -->
+              <div class="fbox-img gr--whitesmoke h-175">
+                <img
+                  class="img-fluid"
+                  src="images/chat.svg"
+                  alt="feature-image"
+                />
+              </div>
+
+              <!-- Text -->
+              <div class="fbox-txt">
+                <h6 class="s-22 w-700">AI Buddy</h6>
+                <p>
+                  Learn, gain insights, compare stocks, explore industry
+                  analysis, stay updated with news, and chat about the
+                  market—all in one place!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- END FEATURE BOX #1 -->
+
+          <!-- FEATURE BOX #2 -->
+          <div class="col">
+            <div class="fbox-2 fb-2 wow fadeInUp">
+              <!-- Image -->
+              <div class="fbox-img gr--whitesmoke h-175">
+                <img
+                  class="img-fluid"
+                  src="images/notes.svg"
+                  alt="feature-image"
+                />
+              </div>
+
+              <!-- Text -->
+              <div class="fbox-txt">
+                <h6 class="s-22 w-700">Smart Notes</h6>
+                <p>
+                  Create your own personalized notes, save key information
+                  directly from chat responses, and use smart search to
+                  reference them later.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- END FEATURE BOX #2 -->
+
+          <!-- FEATURE BOX #3 -->
+          <div class="col">
+            <div class="fbox-2 fb-3 wow fadeInUp">
+              <!-- Image -->
+              <div class="fbox-img gr--whitesmoke h-175">
+                <img
+                  class="img-fluid"
+                  src="images/screener.svg"
+                  alt="feature-image"
+                />
+              </div>
+
+              <!-- Text -->
+              <div class="fbox-txt">
+                <h6 class="s-22 w-700">Smart Screener</h6>
+                <p>
+                  Say goodbye to limited filters and complex queries. Discover
+                  and screen stocks effortlessly using simple and plain English.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- END FEATURE BOX #3 -->
+        </div>
+        <!-- End row -->
+      </div>
+      <!-- END FEATURES-2 WRAPPER -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- END FEATURES-2 -->
+
+  <!-- TEXT CONTENT
+			============================================= -->
+  <section class="bg--03 py-100 ct-03 content-section division">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <!-- IMAGE BLOCK -->
+        <div class="col-md-6 col-lg-7">
+          <div class="img-block left-column wow fadeInRight">
+            <img
+              class="img-fluid"
+              src="images/trust.svg"
+              alt="content-image"
+            />
+          </div>
+        </div>
+
+        <!-- TEXT BLOCK -->
+        <div class="col-md-6 col-lg-5">
+          <div class="txt-block color--white right-column wow fadeInLeft">
+            <!-- Section ID -->
+            <span class="section-id">Grounded Insights</span>
+
+            <!-- Title -->
+            <h2 class="s-44 w-700">Trustworthy Stock Research</h2>
+
+            <!-- List -->
+            <ul class="simple-list">
+              <li class="list-item">
+                <p>
+                  <strong>Avoiding Hallucinations:</strong> Get accurate, data-driven insights
+                  directly from stock reports, eliminating any guesswork or
+                  unreliable information.
+                </p>
+              </li>
+
+              <li class="list-item">
+                <p class="mb-0">
+                  <strong>Trust Your Buddy:</strong> Shagun shows exactly where its data comes
+                  from, ensuring transparency and reliability in every insight.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END TEXT BLOCK -->
       </div>
       <!-- End row -->
     </div>
     <!-- End container -->
   </section>
-</Layout>
+  <!-- END TEXT CONTENT -->
 
-<div
-  id="modal-3"
-  class="modal auto-off fade"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="modal-3"
->
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content">
-      <!-- CLOSE BUTTON -->
-      <button
-        type="button"
-        class="btn-close ico-10 white-color"
-        data-bs-dismiss="modal"
-        aria-label="Close"
-        
-      >
-        <span class="flaticon-cancel"></span>
-      </button>
+  <!-- FEATURES-13
+			============================================= -->
+  <section
+    id="features-13"
+    class="shape--bg shape--white-500 pt-100 features-section division"
+  >
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <!-- FEATURES-13 WRAPPER -->
+        <div class="col-md-7 order-last order-md-2">
+          <div class="fbox-13-wrapper wow fadeInRight">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- FEATURE BOX #1 -->
+                <div
+                  id="fb-12-1"
+                  class="fbox-12 bg--white-100 block-shadow r-12 mb-30"
+                >
+            
 
-      <!-- MODAL CONTENT -->
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <!-- BACKGROUND IMAGE -->
-            <div
-              class="col-md-5 bg-img d-none d-sm-flex align-items-end beta-join-image"
-            >
-            </div>
-
-            <!-- REQUEST FORM -->
-            <div class="col-md-7">
-              <div class="modal-body-content">
-                <!-- TEXT -->
-                <div class="request-form-title">
-                  <!-- Title 	-->
-                  <h3 class="s-28 w-700 mb-4">Join beta Program!</h3>
+                  <!-- Text -->
+                  <div class="fbox-txt">
+                    <h5 class="s-19 w-700">No Stock Advice</h5>
+                    <p>
+                      We do not provide personalized stock recommendations or trading tips.
+                    </p>
+                  </div>
                 </div>
 
-                <!-- FORM -->
-                <form name="requestForm" class="row request-form">
-                  <!-- Form Input -->
-                  <div class="col-md-12">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control name"
-                      placeholder="Enter Your Name*"
-                      autocomplete="off"
-                      required
-                    />
-                  </div>
+                <!-- FEATURE BOX #2 -->
+                <div
+                  id="fb-12-2"
+                  class="fbox-12 bg--white-100 block-shadow r-12"
+                >
+                
 
-                  <!-- Form Input -->
-                  <div class="col-md-12">
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control email"
-                      placeholder="Enter Your Email*"
-                      autocomplete="off"
-                      required
-                    />
+                  <!-- Text -->
+                  <div class="fbox-txt">
+                    <h5 class="s-19 w-700">No Guarantees</h5>
+                    <p>
+                      We do not promise or guarantee any specific returns on investments.
+                    </p>
                   </div>
-                  <div class="col-md-12">
-                    <textarea
-                      class="form-control"
-                      id="exampleFormControlTextarea"
-                      placeholder="How did you hear about us?"
-                      rows="3"></textarea>
-                  </div>
+                </div>
+              </div>
 
-                  <!-- Form Button -->
-                  <div class="col-md-12 form-btn">
-                    <button
-                      type="submit"
-                      class="btn btn--theme hover--theme submit"
-                      >Submit Request</button
-                    >
-                  </div>
+              <div class="col-md-6">
+                <!-- FEATURE BOX #3 -->
+                <div
+                  id="fb-12-3"
+                  class="fbox-12 bg--white-100 block-shadow r-12 mb-30"
+                >
+           
 
-                  <!-- Form Message -->
-                  <div class="col-md-12">
-                    <span class="loading"></span>
+                  <!-- Text -->
+                  <div class="fbox-txt">
+                    <h5 class="s-19 w-700">Data-Driven Insights</h5>
+                    <p>
+                      Our insights are based on available data, but we do not predict future performance.
+                    </p>
                   </div>
-                </form>
-                <!-- END FORM -->
+                </div>
+
+                <!-- FEATURE BOX #4 -->
+                <div
+                  id="fb-12-4"
+                  class="fbox-12 bg--white-100 block-shadow r-12"
+                >
+            
+
+                  <!-- Text -->
+                  <div class="fbox-txt">
+                    <h5 class="s-19 w-700">Investment Responsibility</h5>
+                    <p>
+                      All investment decisions are made at your own discretion and risk.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- END REQUEST FORM -->
+          </div>
+          <!-- End row -->
+        </div>
+        <!-- END FEATURES-13 WRAPPER -->
+
+        <!-- TEXT BLOCK -->
+        <div class="col-md-5 order-first order-md-2">
+          <div class="txt-block left-column wow fadeInLeft">
+            <!-- Section ID -->
+            <span class="section-id">Disclaimer</span>
+
+            <!-- Title -->
+            <h2 class="s-46 w-700">Transparency in Our Approach.</h2>
+
+            <!-- Text -->
+            <p>
+              At Shagun, we provide data-driven insights and research to help you make informed investment decisions
+            </p>
+
+            <!-- List -->
+            <ul class="simple-list">
+              <li class="list-item">
+                <p>
+                  Shagun equips you with the tools to conduct your own research and analysis.
+                </p>
+              </li>
+
+              <li class="list-item">
+                <p class="mb-0">
+                  It provides real-time, data-backed insights from stock reports and trends to help you make informed decisions
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
+        <!-- END TEXT BLOCK -->
       </div>
-      <!-- END MODAL CONTENT -->
+      <!-- End row -->
     </div>
-  </div>
-</div>
+    <!-- End container -->
+  </section>
+  <!-- END FEATURES-13 -->
+
+  <!-- BANNER-13
+			============================================= -->
+  <section id="banner-13" class="pt-100 banner-section">
+    <div class="container">
+      <!-- BANNER-13 WRAPPER -->
+      <div class="banner-13-wrapper bg--03 bg--scroll r-16 block-shadow">
+        <div class="banner-overlay">
+          <div class="row d-flex align-items-center">
+            <!-- BANNER-13 TEXT -->
+            <div class="col-md-7">
+              <div class="banner-13-txt color--white">
+                <!-- Title -->
+                <h2 class="s-46 w-700">Join  Community</h2>
+
+                <!-- Text -->
+                <p class="p-lg">
+                  Be part of a growing community of investors. Share insights, learn together, and invest smarter with Shagun!
+                </p>
+
+                <!-- Button -->
+                <a href="#hero-17" class="btn r-04 btn--theme hover--tra-white">
+Join  Community                </a>
+              </div>
+            </div>
+            <!-- END BANNER-13 TEXT -->
+
+            <!-- BANNER-13 IMAGE -->
+            <div class="col-md-5">
+              <div class="banner-13-img text-center">
+                <img
+                  class="img-fluid"
+                  src="images/community.svg"
+                  alt="banner-image"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- End row -->
+        </div>
+        <!-- End banner overlay -->
+      </div>
+      <!-- END BANNER-13 WRAPPER -->
+    </div>
+    <!-- End container -->
+  </section>
+  <!-- END BANNER-13 -->
+
+  <!-- NEWSLETTER-1
+			============================================= -->
+  <section id="newsletter-1" class="newsletter-section">
+    <div class="newsletter-overlay">
+      <div class="container">
+        <div class="row d-flex align-items-center row-cols-1 row-cols-lg-2">
+          <!-- NEWSLETTER TEXT -->
+          <div class="col">
+            <div class="newsletter-txt">
+              <h4 class="s-26 w-700">
+                 Get exclusive early access to Shagun and help shape the future of stock research!
+              </h4>
+            </div>
+          </div>
+
+          <!-- NEWSLETTER FORM -->
+          <div class="col">
+            <form id="newsletter-form">
+              <div class="input-group">
+                <input
+                  type="email"
+                  autocomplete="off"
+                  class="form-control email2"
+                  placeholder="Your email address"
+                  required
+                  id="s-email"
+                />
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn--theme hover--theme joinBetaButton2"
+                    >Join Beta</button
+                  >
+                </span>
+              </div>
+
+              <!-- Newsletter Form Notification -->
+              <label for="s-email" class="form-notification text-success" id="request-form-success-msg2"></label>
+
+            </form>
+            </p>
+          </div>
+          <!-- END NEWSLETTER FORM -->
+        </div>
+        <!-- End row -->
+      </div>
+      <!-- End container -->
+    </div>
+    <!-- End newsletter-overlay -->
+  </section>
+  <!-- END NEWSLETTER-1 -->
+</Layout>
+
 
 <hr class="divider" />
 <style>
@@ -166,47 +454,41 @@ import Layout from "../layouts/Layout.astro";
 
 <script>
   // Import the required modules
-  import { CosmosClient } from "@azure/cosmos";
-
+  import { CosmosClient } from "@azure/cosmos"
   // Wait for the DOM to be ready
   document.addEventListener("DOMContentLoaded", function () {
     // Get the form element
-    const form = document.querySelector("#modal-3 form") as HTMLFormElement;
-
+    const form1 = document.querySelector("#beta-form") as HTMLFormElement;
+    const form2 = document.querySelector("#newsletter-form") as HTMLFormElement;
     // Get the success message element
-    const successMessageElement = document.querySelector(
-      ".request-form-success-msg"
-    ) as HTMLParagraphElement;
-    // Get the "Join Beta" link and its accompanying text
-    const joinBetaButton = document.querySelector(
-      "#joinBetaButton"
-    ) as HTMLElement;
-    const joinBetaText = document.querySelector(
-      ".btn-txt.ico-15"
-    ) as HTMLElement;
-    const closeButton = document.querySelector(".btn-close") as HTMLButtonElement;
+    const successMessageElement1 = document.querySelector(
+      "#request-form-success-msg1"
 
-    // Add a submit event listener to the form
-    form.addEventListener("submit", async function (event) {
+    ) as HTMLParagraphElement;
+    const successMessageElement2 = document.querySelector(
+      "#request-form-success-msg2"
+
+    ) as HTMLParagraphElement;
+
+  // Add a submit event listener to the form
+  form1.addEventListener("submit", async function (event) {
       // Prevent the default form submission
       event.preventDefault();
+      const joinBetaButton = document.querySelector(".joinBetaButton1") as HTMLButtonElement;
 
       // Get the input values
-      const nameInput = form.querySelector(".name") as HTMLInputElement;
-      const emailInput = form.querySelector(".email") as HTMLInputElement;
-      const reasonTextarea = form.querySelector(
-        "#exampleFormControlTextarea"
-      ) as HTMLTextAreaElement;
+      const emailInput = form1.querySelector(".email1") as HTMLInputElement;
+   
 
       // Retrieve the values
-      const name = nameInput.value;
+   
       const email = emailInput.value;
-      const reason = reasonTextarea.value;
+   
 
       // Log the values
-      console.log("Name:", name);
+ 
       console.log("Email:", email);
-      console.log("Reason:", reason);
+     
 
       // Create a Cosmos DB client instance
       const cosmosClient = new CosmosClient({
@@ -230,9 +512,9 @@ import Layout from "../layouts/Layout.astro";
 
       // Create an item (document) in the container
       const item = {
-        name: name,
+        name: "name",
         email: email,
-        reason: reason,
+        reason: "reason",
       };
 
       const { resource: createdItem } = await container.items.create(item);
@@ -241,18 +523,96 @@ import Layout from "../layouts/Layout.astro";
       console.log("Item created:", createdItem);
 
       if (createdItem.name) {
-        closeButton.click();
-        // Show the success message
-        if (successMessageElement) {
-          successMessageElement.textContent =
+      // Show the success message
+      if (successMessageElement1) {
+        successMessageElement1.textContent =
           "Your request has been received. Thank you! We will reach out to you soon.";
-        }
-        // Hide the join beta button and text
-        if (joinBetaButton && joinBetaText) {
-          joinBetaButton.style.display = "none";
-          joinBetaText.style.display = "none";
-        }
+        successMessageElement1.style.display = "block"; // Ensure visibility
       }
+
+      // Hide the join beta button
+     if (joinBetaButton) {
+        joinBetaButton.disabled = true; // Disable button
+        joinBetaButton.textContent = "Submitted"; // Update button text
+      }
+
+      if (emailInput) {
+      
+        emailInput.disabled = true; // Disable input field
+      }
+    }
+    });
+    // Add a submit event listener to the form
+    form2.addEventListener("submit", async function (event) {
+      // Prevent the default form submission
+      event.preventDefault();
+      const joinBetaButton = document.querySelector(".joinBetaButton2") as HTMLButtonElement;
+
+      // Get the input values
+      const emailInput = form2.querySelector(".email2") as HTMLInputElement;
+   
+
+      // Retrieve the values
+   
+      const email = emailInput.value;
+   
+
+      // Log the values
+ 
+      console.log("Email:", email);
+     
+
+      // Create a Cosmos DB client instance
+      const cosmosClient = new CosmosClient({
+        endpoint: "https://synax-website-db.documents.azure.com:443/",
+        key: "MTuyAMnzjnvXfpTf1AX7uQlCxkqe4bdWuK0etCYc903vuRyTGlFvVUthOmillPFRfxzd6B99LfpZACDbzvMlag==",
+      });
+
+      // Define the database and container ID
+      const databaseId = "SYNAX_WEBSITE";
+      const containerId = "BETA_JOIN_WAITLIST";
+
+      // Create a database if it doesn't exist
+      const { database } = await cosmosClient.databases.createIfNotExists({
+        id: databaseId,
+      });
+
+      // Create a container if it doesn't exist
+      const { container } = await database.containers.createIfNotExists({
+        id: containerId,
+      });
+
+      // Create an item (document) in the container
+      const item = {
+        name: "name",
+        email: email,
+        reason: "reason",
+      };
+
+      const { resource: createdItem } = await container.items.create(item);
+
+      // Log the created item
+      console.log("Item created:", createdItem);
+
+      if (createdItem.name) {
+      // Show the success message
+      if (successMessageElement2) {
+        successMessageElement2.textContent =
+          "Your request has been received. Thank you! We will reach out to you soon.";
+        successMessageElement2.style.display = "block"; // Ensure visibility
+      }
+
+      // Hide the join beta button
+     if (joinBetaButton) {
+        joinBetaButton.disabled = true; // Disable button
+        joinBetaButton.textContent = "Submitted"; // Update button text
+      }
+
+      if (emailInput) {
+      
+        emailInput.disabled = true; // Disable input field
+      }
+    }
     });
   });
 </script>

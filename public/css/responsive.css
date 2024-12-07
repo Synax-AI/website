@@ -56,7 +56,7 @@
   /*------------------------------------------*/
 
   /* Nav Link */
-  .wsmenu > .wsmenu-list > li > a { font-size: 0.9375rem; }
+  .wsmenu > .wsmenu-list > li > a { font-size: 1rem; }
 
   /* Button */
   .wsmenu > .wsmenu-list > li a.btn { font-size: 0.9rem; line-height: 28px; padding: 4px 22px 6px; margin: 14px 5px 0; }
@@ -1656,7 +1656,7 @@
   /*   HERO   
   /*------------------------------------------*/
 
-  .hero-section { margin-top: 80px; }
+  .hero-section { margin-top: 0px; }
 
   .hero-section h2 { margin-bottom: 18px; }
   .hero-section h2.s-48, .hero-section h2.s-50 { margin-bottom: 24px; }
@@ -3053,7 +3053,7 @@
   /*   HERO   
   /*------------------------------------------*/
 
-  .hero-section { margin-top: 80px; }
+  .hero-section { margin-top: 0px; }
 
   .hero-section h2 { margin-bottom: 15px; }
   .hero-section h2.s-48, .hero-section h2.s-50 { margin-bottom: 25px; }

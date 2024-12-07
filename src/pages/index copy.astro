@@ -796,3 +796,100 @@ import Layout from "../layouts/Layout.astro";
 	<!-- DIVIDER LINE -->
 	<hr class="divider" />
 </Layout>
+
+<div
+  id="modal-3"
+  class="modal auto-off fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modal-3"
+>
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <!-- CLOSE BUTTON -->
+      <button
+        type="button"
+        class="btn-close ico-10 white-color"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      >
+        <span class="flaticon-cancel"></span>
+      </button>
+
+      <!-- MODAL CONTENT -->
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <!-- BACKGROUND IMAGE -->
+            <div
+              class="col-md-5 bg-img d-none d-sm-flex align-items-end beta-join-image"
+            >
+            </div>
+
+            <!-- REQUEST FORM -->
+            <div class="col-md-7">
+              <div class="modal-body-content">
+                <!-- TEXT -->
+                <div class="request-form-title">
+                  <!-- Title 	-->
+                  <h3 class="s-28 w-700 mb-4">Join beta Program!</h3>
+                </div>
+
+                <!-- FORM -->
+                <form name="requestForm" class="row request-form">
+                  <!-- Form Input -->
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control name"
+                      placeholder="Enter Your Name*"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+
+                  <!-- Form Input -->
+                  <div class="col-md-12">
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control email"
+                      placeholder="Enter Your Email*"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea"
+                      placeholder="How did you hear about us?"
+                      rows="3"></textarea>
+                  </div>
+
+                  <!-- Form Button -->
+                  <div class="col-md-12 form-btn">
+                    <button
+                      type="submit"
+                      class="btn btn--theme hover--theme submit"
+                      >Submit Request</button
+                    >
+                  </div>
+
+                  <!-- Form Message -->
+                  <div class="col-md-12">
+                    <span class="loading"></span>
+                  </div>
+                </form>
+                <!-- END FORM -->
+              </div>
+            </div>
+            <!-- END REQUEST FORM -->
+          </div>
+        </div>
+      </div>
+      <!-- END MODAL CONTENT -->
+    </div>
+  </div>
+</div>
