@@ -3,74 +3,60 @@ const currentPath = Astro.url.pathname.slice(1);
 ---
 
 <header id="header" class="tra-menu navbar-dark light-hero-header white-scroll">
-    <div class="header-wrapper">
-        <!-- MOBILE HEADER -->
-        <div class="wsmobileheader clearfix">
-            <span class="smllogo"
-                ><img
-                    src="/images/logo/icons/Asset_21_4x.png"
-                    alt="mobile-logo"
-                /></span
-            >
-            <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
-        </div>
-
-        <!-- NAVIGATION MENU -->
-        <div class="wsmainfull menu clearfix">
-            <div class="wsmainwp clearfix">
-                <!-- HEADER BLACK LOGO -->
-                <div class="desktoplogo">
-                    <a href="/" class="logo-black"
-                        ><img
-                            src="/images/logo/icons/Asset_21_4x.png"
-                            alt="logo"
-                        /></a
-                    >
-                </div>
-
-                <!-- HEADER WHITE LOGO -->
-                <div class="desktoplogo">
-                    <a href="/index" class="logo-white"
-                        ><img
-                            src="/images/logo/icons/Asset_21_4x.png"
-                            alt="logo"
-                        /></a
-                    >
-                  <span class="fs-4 p-2 text-black s-54 w-500"> Synax.AI</span> 
-                </div>
-                <!-- MAIN MENU -->
-                <nav class="wsmenu clearfix">
-                    <ul class="wsmenu-list nav-theme">
-                        <!-- DROPDOWN SUB MENU -->
-
-                        <!-- SIMPLE NAVIGATION LINK -->
-                        <li class="nl-simple">
-                            <a href="/" class="h-link"
-                                ><span
-                                    class={currentPath === ""
-                                        ? "active"
-                                        : ""}
-                                    data-content="Home">Home</span
-                                ></a
-                            >
-                        </li>
-                
-                        <li class="nl-simple">
-                            <a href="/contacts" class="h-link"
-                                ><span
-                                    class={currentPath === "contacts/"
-                                        ? "active"
-                                        : ""}
-                                    data-content="Contact Us">Contact Us</span
-                                ></a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-                <!-- END MAIN MENU -->
-            </div>
-        </div>
-        <!-- END NAVIGATION MENU -->
+  <div class="header-wrapper">
+    <!-- MOBILE HEADER -->
+    <div class="wsmobileheader clearfix">
+      <span class="smllogo"
+        ><img src="/images/logo/7.png" alt="mobile-logo" /></span
+      >
+      <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
     </div>
-    <!-- End header-wrapper -->
+
+    <!-- NAVIGATION MENU -->
+    <div class="wsmainfull menu clearfix">
+      <div class="wsmainwp clearfix">
+        <!-- HEADER BLACK LOGO -->
+        <div class="desktoplogo">
+          <a href="/" class="logo-black"
+            ><img  src="/images/logo/7.png" alt="logo" /></a
+          >
+        </div>
+
+        <!-- HEADER WHITE LOGO -->
+        <div class="desktoplogo">
+          <a href="/index" class="logo-white"
+            ><img src="/images/logo/7.png" alt="logo" /></a
+          >
+        </div>
+        <!-- MAIN MENU -->
+        <nav class="wsmenu clearfix">
+          <ul class="wsmenu-list nav-theme">
+            <!-- DROPDOWN SUB MENU -->
+
+            <!-- SIMPLE NAVIGATION LINK -->
+            <li class="nl-simple">
+              <a href="/" class="h-link"
+                ><span
+                  class={currentPath === "" ? "active" : ""}
+                  data-content="Home">Home</span
+                ></a
+              >
+            </li>
+
+            <li class="nl-simple">
+              <a href="/contacts" class="h-link"
+                ><span
+                  class={currentPath === "contacts/" ? "active" : ""}
+                  data-content="Contact Us">Contact Us</span
+                ></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- END MAIN MENU -->
+      </div>
+    </div>
+    <!-- END NAVIGATION MENU -->
+  </div>
+  <!-- End header-wrapper -->
 </header>
