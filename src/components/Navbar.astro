@@ -42,7 +42,14 @@ const currentPath = Astro.url.pathname.slice(1);
                 ></a
               >
             </li>
-
+            <li class="nl-simple">
+              <a href="/blog" class="h-link"
+                ><span
+                  class={currentPath === "blog/" ? "active" : ""}
+                  data-content="Blog">Blog</span
+                ></a
+              >
+            </li>
             <li class="nl-simple">
               <a href="/contacts" class="h-link"
                 ><span

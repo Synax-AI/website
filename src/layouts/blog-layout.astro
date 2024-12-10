@@ -50,13 +50,7 @@ const { frontmatter } = Astro.props;
                 src={frontmatter.image.url}
                 alt={frontmatter.image.alt}
               />
-              <div class="text-center">
-                <small>
-                  <a target="_blank" href={frontmatter.image.attribution.url}
-                    >{frontmatter.image.attribution.text}</a
-                  ></small
-                >
-              </div>
+             
             </div>
           </div>
           <div class="row justify-content-center">
