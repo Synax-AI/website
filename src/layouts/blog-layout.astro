@@ -50,7 +50,6 @@ const { frontmatter } = Astro.props;
                 src={frontmatter.image.url}
                 alt={frontmatter.image.alt}
               />
-             
             </div>
           </div>
           <div class="row justify-content-center">
@@ -71,7 +70,86 @@ const { frontmatter } = Astro.props;
 </Layout>
 
 <style>
-  ul{
+
+  ul {
     list-style: disc !important;
   }
+  /* General Layout */
+  body {
+    font-family: "Lato", Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+
+  
+
+  /* Headers */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Merriweather", serif;
+    color: #2a5d84;
+    margin-top: 2rem;
+  }
+
+  h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #2a5d84;
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #1b4d69;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+  }
+
+
+
+  
+
+
+  
+
+  /* Links */
+  a {
+    color: #2a5d84;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+
+  .tags span {
+    background-color: #eef6fb;
+    color: #2a5d84;
+    border-radius: 4px;
+    padding: 0.3rem 0.8rem;
+    margin: 0.2rem;
+    font-size: 0.9rem;
+  }
+
+ 
+
+
 </style>
