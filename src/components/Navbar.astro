@@ -2,69 +2,314 @@
 const currentPath = Astro.url.pathname.slice(1);
 ---
 
-<header id="header" class="tra-menu navbar-dark light-hero-header white-scroll">
-  <div class="header-wrapper">
-    <!-- MOBILE HEADER -->
-    <div class="wsmobileheader clearfix">
-      <span class="smllogo"
-        >  <a href="/" class="logo-black"
-        ><img src="/images/logo/7.png" alt="mobile-logo" /></a></span
+<header class="obs-header" id="obs-header">
+  <div class="container obs-header__inner">
+    <!-- LOGO -->
+ <a href="/" class="obs-logo">
+  <img src="/images/logo/icons/synax-logo.png" alt="Synax" />
+  <span class="obs-logo-text">Synax</span>
+</a>
+
+
+    <!-- NAV — CENTER -->
+    <nav class="obs-nav" id="obs-nav">
+      <a href="/#problem" class="obs-nav__link">Problem</a>
+      <a href="/#features" class="obs-nav__link">Product</a>
+      <a href="/#why-obsight" class="obs-nav__link">Why Obsight</a>
+      
+    </nav>
+
+    <!-- CTA — RIGHT -->
+    <div class="obs-header__actions">
+      <a href="/#waitlist" class="obs-header__cta"
+        >Apply for Founding Access <span>→</span></a
       >
-      <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
     </div>
 
-    <!-- NAVIGATION MENU -->
-    <div class="wsmainfull menu clearfix">
-      <div class="wsmainwp clearfix">
-        <!-- HEADER BLACK LOGO -->
-        <div class="desktoplogo">
-          <a href="/" class="logo-black"
-            ><img  src="/images/logo/7.png" alt="logo" /></a
-          >
-        </div>
-
-        <!-- HEADER WHITE LOGO -->
-        <div class="desktoplogo">
-          <a href="/" class="logo-white"
-            ><img src="/images/logo/7.png" alt="logo" /></a
-          >
-        </div>
-        <!-- MAIN MENU -->
-        <nav class="wsmenu clearfix">
-          <ul class="wsmenu-list nav-theme">
-            <!-- DROPDOWN SUB MENU -->
-
-            <!-- SIMPLE NAVIGATION LINK -->
-            <li class="nl-simple">
-              <a href="/" class="h-link"
-                ><span
-                  class={currentPath === "" ? "active" : ""}
-                  data-content="Home">Home</span
-                ></a
-              >
-            </li>
-            <li class="nl-simple">
-              <a href="/blog" class="h-link"
-                ><span
-                  class={currentPath === "blog" ? "active" : ""}
-                  data-content="Blog">Blog</span
-                ></a
-              >
-            </li>
-            <li class="nl-simple">
-              <a href="/contacts" class="h-link"
-                ><span
-                  class={currentPath === "contacts" ? "active" : ""}
-                  data-content="Contact Us">Contact Us</span
-                ></a
-              >
-            </li>
-          </ul>
-        </nav>
-        <!-- END MAIN MENU -->
-      </div>
-    </div>
-    <!-- END NAVIGATION MENU -->
+    <!-- MOBILE TOGGLE -->
+    <button class="obs-hamburger" id="obs-hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-  <!-- End header-wrapper -->
+
 </header>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="obs-mobile-menu" id="obs-mobile-menu">
+    <nav class="obs-mobile-nav">
+     <a href="/#problem" class="obs-mobile-nav__link">Problem</a>
+      <a href="/#features" class="obs-mobile-nav__link">Product</a>
+      <a href="/#why-obsight" class="obs-mobile-nav__link">Why Obsight</a>
+     
+      <a href="/#waitlist" class="obs-mobile-nav__cta">Apply for Founding Access →</a>
+    </nav>
+  </div>
+
+<style>
+  /* ============================================
+     PREMIUM NAVBAR
+     ============================================ */
+  .obs-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: transparent;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.2);
+    transition: background 0.4s ease, border-color 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+
+
+  .obs-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  /* --- Logo --- */
+  .obs-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .obs-logo img {
+    height: 32px;
+    width: 32px;
+  }
+  .obs-logo-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1440a5;
+    letter-spacing: 0.02em;
+  }
+  .obs-logo:hover img {
+    opacity: 0.8;
+  }
+
+  /* --- Center Nav --- */
+  .obs-nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  .obs-nav__link {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #64748b;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.25s ease;
+  }
+  .obs-nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1.5px;
+    background: #2563eb;
+    border-radius: 1px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .obs-nav__link:hover {
+    color: #0f172a;
+  }
+  .obs-nav__link:hover::after {
+    width: 100%;
+  }
+
+  /* --- CTA Button --- */
+  .obs-header__actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .obs-header__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 9px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+  .obs-header__cta span {
+    color: #ffffff;
+    transition: transform 0.25s ease;
+    display: inline-block;
+  }
+  .obs-header__cta:hover {
+    background: #1e293b;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+    transform: translateY(-1px);
+  }
+  .obs-header__cta:hover span {
+    transform: translateX(2px);
+  }
+  .obs-header__cta:active {
+    transform: translateY(0);
+  }
+
+  /* --- Hamburger (mobile only) --- */
+  .obs-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+  .obs-hamburger span {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: #0f172a;
+    border-radius: 1px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+
+  /* Hamburger open state */
+  .obs-hamburger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .obs-hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .obs-hamburger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  /* --- Mobile Overlay --- */
+  .obs-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+  .obs-mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .obs-mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 48px 24px;
+  }
+  .obs-mobile-nav__link {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #475569;
+    text-decoration: none;
+    padding: 16px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    transition: color 0.25s ease;
+  }
+  .obs-mobile-nav__link:hover {
+    color: #0f172a;
+  }
+  .obs-mobile-nav__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 28px;
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+  }
+  .obs-mobile-nav__cta:hover {
+    background: #1e293b;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .obs-header {
+      background: #ffffff !important;
+      z-index: 9999;
+    }
+    .obs-nav,
+    .obs-header__actions {
+      display: none;
+    }
+    .obs-hamburger {
+      display: flex;
+    }
+    .obs-mobile-menu {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("obs-header");
+    const hamburger = document.getElementById("obs-hamburger");
+    const mobileMenu = document.getElementById("obs-mobile-menu");
+
+
+
+    // Mobile toggle
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
+        document.body.style.overflow = mobileMenu.classList.contains("open")
+          ? "hidden"
+          : "";
+      });
+
+      // Close on link click
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("open");
+          mobileMenu.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+    }
+  });
+</script>

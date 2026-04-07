@@ -5,9 +5,19 @@ import "../styles/global.css";
 
 export interface Props {
   title: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
 }
 
-const { title } = Astro.props;
+const { 
+  title,
+  description = "Obsight by Synax.ai is a professional forensic workbench for equity research analysis, providing data-driven, reliable insights for serious investors and analysts.",
+  keywords = "equity research, forensic workbench, stock analysis, financial data, investment research, Synax.ai, Obsight",
+  image = "/images/logo/icons/synax-logo.png"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://synax.ai');
 ---
 
 <!DOCTYPE html>
@@ -24,46 +34,28 @@ const { title } = Astro.props;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
     <!-- SEO Meta Tags -->
-    <meta
-      name="title"
-      content="Shagun AI Buddy for Smarter Investments | Synax AI & Research Pvt. Ltd."
-    />
-    <meta
-      name="description"
-      content="Synax.ai offers Shagun, an AI-driven stock research and analytics tool. Analyze financial reports, compare stocks, screen investments, set alerts, and optimize your portfolio with AI. Perfect for investors at all levels."
-    />
-    <meta
-      name="keywords"
-      content="AI stock research, stock analytics tool, stock market alerts, financial report analysis, stock screening software, portfolio analysis, stock comparison tool, AI-powered investment research, best stock screener, stock research for beginners, Shagun AI"
-    />
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
 
     <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:url" content="https://Synax.ai" />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Shagun AI Buddy for Smarter Investments | Synax AI & Research Pvt. Ltd."
-    />
-    <meta
-      property="og:description"
-      content="Synax.ai offers Shagun, an AI-driven stock research and analytics tool. Analyze financial reports, compare stocks, screen investments, set alerts, and optimize your portfolio with AI. Perfect for investors at all levels."
-    />
-    <meta property="og:image" content="/images/logo/icons/Asset_21_4x.png" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="Synax.ai" />
-    <meta property="twitter:url" content="https://Synax.ai" />
-    <meta
-      name="twitter:title"
-      content="Shagun AI Buddy for Smarter Investments | Synax AI & Research Pvt. Ltd."
-    />
-    <meta
-      name="twitter:description"
-      content="Synax.ai offers Shagun, an AI-driven stock research and analytics tool. Analyze financial reports, compare stocks, screen investments, set alerts, and optimize your portfolio with AI. Perfect for investors at all levels."
-    />
-    <meta name="twitter:image" content="/images/logo/icons/Asset_21_4x.png" />
+    <meta property="twitter:domain" content="synax.ai" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
 
     <!-- Additional Enhancements -->
     <meta name="author" content="Synax AI & Research Pvt. Ltd." />
@@ -116,11 +108,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <div id="page" class="page font--jakarta">
+    <main id="page" class="page font--jakarta">
       <Navbar />
       <slot />
       <Footer />
-    </div>
+    </main>
     <!-- EXTERNAL SCRIPTS
 		============================================= -->
     <script is:inline src="/js/jquery-3.7.0.min.js"></script>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://synax.ai/sitemap-index.xml

@@ -3,616 +3,1919 @@ import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Synax.AI - Transforming Research into Practical Solutions">
-  <section id="hero-15" class="bg--scroll hero-section blur--purple mt-45">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-md-6 pl-0">
-          <div class="hero-15-img text-center wow fadeInLeft pl-0">
-            <img
-              class="img-fluid mx-w-140 pr-25 pt-0"
-              src="images/1.svg"
-              alt="hero-image"
-            />
+<Layout 
+  title="Obsight | Forensic Workbench for Equity Research Analysis"
+  description="Obsight by Synax.ai is a professional forensic workbench for equity research analysis, providing data-driven, reliable insights for serious investors and analysts."
+>
+  <!-- ===================== HERO ===================== -->
+  <section class="obs-hero">
+    <div class="obs-hero__grid-bg"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="row align-items-center">
+        <!-- LEFT: Copy -->
+        <div class="col-lg-6">
+          <span class="obs-badge">
+            Obsight — Forensic Workbench for Equity Analysts
+          </span>
+
+          <h1 class="obs-hero__heading">
+            Insights Hidden in Filings.<br />
+            <span class="text-gradient">Extracted. Verified. Traceable.</span>
+          </h1>
+
+          <p class="obs-hero__sub">
+            Obsight is being built to extract and structure signals from company
+            filings — helping analysts move from raw data to verified
+            observations faster.
+          </p>
+
+          <div class="obs-hero__cta">
+            <a href="#waitlist" class="btn-premium">Join Early Access →</a>
+            <a href="#features" class="obs-link-outline">Explore Platform</a>
+          </div>
+
+          <!-- NEW URGENCY -->
+          <p style="margin-top:10px; font-size:0.85rem; color:var(--text-secondary);">
+            Early users get priority access and direct input into product
+            development.
+          </p>
+
+          <div class="obs-hero__trust">
+            <span
+              ><i class="fas fa-shield-alt"></i> Built for Equity Analysts</span
+            >
+            <span><i class="fas fa-link"></i> Traceable to Source Filings</span>
+            <span><i class="fas fa-lock"></i> No Black-Box Outputs</span>
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="hero-15-txt wow fadeInRight px-50">
-            <h2 class="s-54 w-500">Invest Confidently with <span class="txt-blue-400">Shagun</span></h2>
-
-            <!-- <p class=" color--grey">
-              Shagun, your AI Investment Buddy 🤖! Ask Shagun about companies,
-              and it will provide answers straight from annual reports.
-            </p> -->
-            <form id="beta-form" class="quick-form form-shadow mt-45">
-              <!-- Form Inputs -->
-              <div class="input-group">
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control email1 r-06 input-email"
-                  placeholder="Your email address"
-                  autocomplete="off"
-                  required
-                />
-                <span class="input-group-btn form-btn">
-                  <button
-                    type="submit"
-                    class="btn r-06 btn--theme hover--theme submit joinBetaButton1"
-                    >Join Beta</button
-                  >
-                </span>
+        <!-- RIGHT: Live Data Preview -->
+        <div class="col-lg-6">
+          <div class="obs-hero-terminal">
+            <div class="obs-terminal__bar">
+              <span class="obs-terminal__title">Obsight — Signal Report</span>
+            </div>
+            <div class="obs-terminal__body">
+              <div class="obs-terminal__row obs-terminal__row--header">
+                <span>XYZ Industries Ltd</span>
+                <span class="obs-signal obs-signal--red"
+                  >⚠ MULTIPLE SIGNALS</span
+                >
               </div>
-              <label
-                for="email"
-                class="text-success"
-                id="request-form-success-msg1"></label>
-
-              <!-- Form Message -->
-              <div class="quick-form-msg"><span class="loading"></span></div>
-            </form>
-            <p id="" class="p-sm btn-txt ico-15 text-success"></p>
-            <p class="color--black">
-              Be among the first to try Shagun, the AI-powered stock research
-              platform that makes investing simple and smart. <strong>
-                Join beta</strong
-              > and help us build the tool that you can love and trust.
-            </p>
+              <div class="obs-terminal__divider"></div>
+              <div class="obs-terminal__row">
+                <span class="obs-terminal__label">Revenue</span>
+                <span class="obs-terminal__val obs-terminal__val--green"
+                  >↑ +32%</span
+                >
+              </div>
+              <div class="obs-terminal__row">
+                <span class="obs-terminal__label">Operating Cash Flow</span>
+                <span class="obs-terminal__val obs-terminal__val--red"
+                  >↓ -18%</span
+                >
+              </div>
+              <div class="obs-terminal__row">
+                <span class="obs-terminal__label">Receivables</span>
+                <span class="obs-terminal__val obs-terminal__val--red"
+                  >↑ +47%</span
+                >
+              </div>
+              <div class="obs-terminal__divider"></div>
+              <div class="obs-terminal__section">
+                <span class="obs-terminal__tag">OBSERVATION</span>
+                <p>
+                  Receivables growing faster than revenue, while cash flow
+                  trends downward — may require further analysis.
+                </p>
+              </div>
+              <div class="obs-source-block">
+                <span class="obs-source-tag">SOURCE</span>
+                <p>AR FY23 → Pg.118 · Pg.92 · Notes (Pg.134)</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- FEATURES-2
-			============================================= -->
-  <section id="features-2" class="py-100 features-section division">
-    <div class="container">
-      <!-- SECTION TITLE -->
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-9">
-          <div class="section-title mb-80">
-            <!-- Title -->
-            <h2 class="s-48 w-700">Invest Smarter, Faster</h2>
 
-            <!-- Text -->
-            <p class="s-21 color--grey">
-              Researching Stocks Has Never Been Easier!
-            </p>
-          </div>
-        </div>
+  <!-- ===================== PROBLEM ===================== -->
+  <section class="obs-problem"  id="problem">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="obs-badge">THE PROBLEM</span>
+        <h2 class="obs-section-title">
+          Equity Research is Still <span class="text-gradient">Manual</span>
+        </h2>
+        <p class="obs-section-sub mx-auto">
+          Analysts spend hours navigating filings, cross-checking numbers, and
+          piecing together context — slowing down decision-making and making it
+          harder to surface what actually matters.
+        </p>
       </div>
 
-      <!-- FEATURES-2 WRAPPER -->
-      <div class="fbox-wrapper text-center">
-        <div class="row row-cols-1 row-cols-md-3">
-          <!-- FEATURE BOX #1 -->
-          <div class="col">
-            <div class="fbox-2 fb-1 wow fadeInUp">
-              <!-- Image -->
-              <div class="fbox-img gr--whitesmoke h-175">
-                <img
-                  class="img-fluid"
-                  src="images/chat.svg"
-                  alt="feature-image"
-                />
-              </div>
-
-              <!-- Text -->
-              <div class="fbox-txt">
-                <h6 class="s-22 w-700">AI Buddy</h6>
-                <p>
-                  Learn, gain insights, compare stocks, explore industry
-                  analysis, stay updated with news, and chat about the
-                  market—all in one place!
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- END FEATURE BOX #1 -->
-
-          <!-- FEATURE BOX #2 -->
-          <div class="col">
-            <div class="fbox-2 fb-2 wow fadeInUp">
-              <!-- Image -->
-              <div class="fbox-img gr--whitesmoke h-175">
-                <img
-                  class="img-fluid"
-                  src="images/notes.svg"
-                  alt="feature-image"
-                />
-              </div>
-
-              <!-- Text -->
-              <div class="fbox-txt">
-                <h6 class="s-22 w-700">Smart Notes</h6>
-                <p>
-                  Create your own personalized notes, save key information
-                  directly from chat responses, and use smart search to
-                  reference them later.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- END FEATURE BOX #2 -->
-
-          <!-- FEATURE BOX #3 -->
-          <div class="col">
-            <div class="fbox-2 fb-3 wow fadeInUp">
-              <!-- Image -->
-              <div class="fbox-img gr--whitesmoke h-175">
-                <img
-                  class="img-fluid"
-                  src="images/screener.svg"
-                  alt="feature-image"
-                />
-              </div>
-
-              <!-- Text -->
-              <div class="fbox-txt">
-                <h6 class="s-22 w-700">Smart Screener</h6>
-                <p>
-                  Say goodbye to limited filters and complex queries. Discover
-                  and screen stocks effortlessly using simple and plain English.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- END FEATURE BOX #3 -->
-        </div>
-        <!-- End row -->
-      </div>
-      <!-- END FEATURES-2 WRAPPER -->
-    </div>
-    <!-- End container -->
-  </section>
-  <!-- END FEATURES-2 -->
-
-  <!-- TEXT CONTENT
-			============================================= -->
-  <section class="bg--03 py-100 ct-03 content-section division">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <!-- IMAGE BLOCK -->
-        <div class="col-md-6 col-lg-7">
-          <div class="img-block left-column wow fadeInRight">
-            <img class="img-fluid" src="images/trust.svg" alt="content-image" />
-          </div>
-        </div>
-
-        <!-- TEXT BLOCK -->
-        <div class="col-md-6 col-lg-5">
-          <div class="txt-block color--white right-column wow fadeInLeft">
-            <!-- Section ID -->
-            <span class="section-id">Grounded Insights</span>
-
-            <!-- Title -->
-            <h2 class="s-44 w-700">Trustworthy Stock Research</h2>
-
-            <!-- List -->
-            <ul class="simple-list">
-              <li class="list-item">
-                <p>
-                  <strong>Avoiding Hallucinations:</strong> Get accurate, data-driven
-                  insights directly from stock reports, eliminating any guesswork
-                  or unreliable information.
-                </p>
-              </li>
-
-              <li class="list-item">
-                <p class="mb-0">
-                  <strong>Trust Your Buddy:</strong> Shagun shows exactly where its
-                  data comes from, ensuring transparency and reliability in every
-                  insight.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- END TEXT BLOCK -->
-      </div>
-      <!-- End row -->
-    </div>
-    <!-- End container -->
-  </section>
-  <!-- END TEXT CONTENT -->
-
-  <!-- FEATURES-13
-			============================================= -->
-  <section
-    id="features-13"
-    class="shape--bg shape--white-500 pt-100 features-section division"
-  >
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <!-- FEATURES-13 WRAPPER -->
-        <div class="col-md-7 order-last order-md-2">
-          <div class="fbox-13-wrapper wow fadeInRight">
-            <div class="row">
-              <div class="col-md-6">
-                <!-- FEATURE BOX #1 -->
-                <div
-                  id="fb-12-1"
-                  class="fbox-12 bg--white-100 block-shadow r-12 mb-30"
-                >
-                  <!-- Text -->
-                  <div class="fbox-txt">
-                    <h5 class="s-19 w-700">No Stock Advice</h5>
-                    <p>
-                      We do not provide personalized stock recommendations or
-                      trading tips.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- FEATURE BOX #2 -->
-                <div
-                  id="fb-12-2"
-                  class="fbox-12 bg--white-100 block-shadow r-12"
-                >
-                  <!-- Text -->
-                  <div class="fbox-txt">
-                    <h5 class="s-19 w-700">No Guarantees</h5>
-                    <p>
-                      We do not promise or guarantee any specific returns on
-                      investments.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <!-- FEATURE BOX #3 -->
-                <div
-                  id="fb-12-3"
-                  class="fbox-12 bg--white-100 block-shadow r-12 mb-30"
-                >
-                  <!-- Text -->
-                  <div class="fbox-txt">
-                    <h5 class="s-19 w-700">Data-Driven Insights</h5>
-                    <p>
-                      Our insights are based on available data, but we do not
-                      predict future performance.
-                    </p>
-                  </div>
-                </div>
-
-                <!-- FEATURE BOX #4 -->
-                <div
-                  id="fb-12-4"
-                  class="fbox-12 bg--white-100 block-shadow r-12"
-                >
-                  <!-- Text -->
-                  <div class="fbox-txt">
-                    <h5 class="s-19 w-700">Investment Responsibility</h5>
-                    <p>
-                      All investment decisions are made at your own discretion
-                      and risk.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End row -->
-        </div>
-        <!-- END FEATURES-13 WRAPPER -->
-
-        <!-- TEXT BLOCK -->
-        <div class="col-md-5 order-first order-md-2">
-          <div class="txt-block left-column wow fadeInLeft">
-            <!-- Section ID -->
-            <span class="section-id">Disclaimer</span>
-
-            <!-- Title -->
-            <h2 class="s-46 w-700">Transparency in Our Approach.</h2>
-
-            <!-- Text -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="obs-problem-card">
+            <div class="obs-problem-card__metric">200+</div>
+            <h5>Pages per Filing</h5>
             <p>
-              At Shagun, we provide data-driven insights and research to help
-              you make informed investment decisions
+              Filings span hundreds of pages — making it time-consuming to
+              locate and connect relevant information.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="obs-problem-card obs-problem-card--warn">
+            <div class="obs-problem-card__metric">⚠</div>
+            <h5>Signals Are Hard to Surface</h5>
+            <p>
+              Important patterns are often buried across footnotes, disclosures,
+              and financial statements.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="obs-problem-card">
+            <div class="obs-problem-card__metric">—</div>
+            <h5>Limited Source Traceability</h5>
+            <p>
+              Linking observations back to exact source sections in filings is
+              often manual and time-intensive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section id="features" class="obs-features">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="obs-badge">PLATFORM</span>
+        <h2 class="obs-section-title">
+          From Filings to <span class="text-gradient">
+            Structured Observations
+          </span>
+        </h2>
+        <p class="obs-section-sub mx-auto">
+          Obsight is being built to transform raw disclosures into structured,
+          traceable observations — helping analysts review faster, validate
+          context, and focus on what matters.
+        </p>
+        <p style="font-size:0.9rem; color:#6b7280;">
+          Unlike traditional tools, Obsight focuses on structuring and linking
+          information.
+        </p>
+      </div>
+
+      <!-- HERO FEATURE -->
+      <div class="obs-feature-hero">
+        <div class="row align-items-center">
+          <div class="col-lg-5 text-center text-lg-start">
+            <span class="obs-badge obs-badge--accent">CORE ENGINE</span>
+            <h3 class="obs-feature-hero__title">
+              Observation Structuring Engine
+            </h3>
+            <p class="obs-feature-hero__desc">
+              Converts complex filings into structured observations — not
+              summaries, but signals that can be reviewed and verified with
+              source context.
             </p>
 
-            <!-- List -->
-            <ul class="simple-list">
-              <li class="list-item">
-                <p>
-                  Shagun equips you with the tools to conduct your own research
-                  and analysis.
-                </p>
-              </li>
+            <div class="obs-feature-hero__signals">
+              <div class="obs-signal-row">
+                <span class="obs-signal obs-signal--amber">⚠ SIGNAL</span>
+                <span>Receivables ↑ 47% vs Revenue ↑ 32%</span>
+              </div>
+              <div class="obs-signal-row">
+                <span class="obs-signal obs-signal--amber">⚠ SIGNAL</span>
+                <span>Cash flow not supporting reported earnings</span>
+              </div>
+              <div class="obs-signal-row">
+                <span class="obs-signal obs-signal--green">✓ VERIFIED</span>
+                <span>Source: AR FY23, Pg.118</span>
+              </div>
+            </div>
+          </div>
 
-              <li class="list-item">
-                <p class="mb-0">
-                  It provides real-time, data-backed insights from stock reports
-                  and trends to help you make informed decisions
+          <div class="col-lg-7">
+            <div class="obs-feature-hero__preview">
+              <div class="obs-data-block">
+                <div class="obs-data-block__header">
+                  <span class="obs-data-block__label">OBSERVATION</span>
+                  <span class="obs-data-block__badge">STRUCTURED</span>
+                </div>
+                <p class="obs-data-block__content">
+                  Receivables growth outpacing revenue, alongside weakening cash
+                  flow trends — may require further analysis.
                 </p>
-              </li>
-            </ul>
+              </div>
+
+              <div class="obs-data-block obs-data-block--highlight">
+                <div class="obs-data-block__header">
+                  <span class="obs-data-block__label">METRICS</span>
+                </div>
+
+                <div class="obs-data-metrics">
+                  <div class="obs-metric">
+                    <span class="obs-metric__label">Revenue Growth</span>
+                    <span class="obs-metric__value obs-metric__value--green"
+                      >+32%</span
+                    >
+                  </div>
+
+                  <div class="obs-metric">
+                    <span class="obs-metric__label">Cash Flow</span>
+                    <span class="obs-metric__value obs-metric__value--red"
+                      >-18%</span
+                    >
+                  </div>
+
+                  <div class="obs-metric">
+                    <span class="obs-metric__label">Receivables</span>
+                    <span class="obs-metric__value obs-metric__value--red"
+                      >+47%</span
+                    >
+                  </div>
+
+                  <div class="obs-metric">
+                    <span class="obs-metric__label">Source</span>
+                    <span class="obs-metric__value">AR FY23</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- END TEXT BLOCK -->
       </div>
-      <!-- End row -->
-    </div>
-    <!-- End container -->
-  </section>
-  <!-- END FEATURES-13 -->
 
-  <!-- BANNER-13
-			============================================= -->
-  <section id="banner-13" class="pt-100 banner-section">
+      <!-- SECONDARY FEATURES -->
+      <div class="row g-3 mt-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="obs-feat-card">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h5>Signal Identification</h5>
+            <p>
+              Surface patterns across financial statements, disclosures, and
+              notes.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="obs-feat-card">
+            <i class="fas fa-link"></i>
+            <h5>Source-Linked Evidence</h5>
+            <p>
+              Every observation connects directly to its original filing for
+              verification.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="obs-feat-card">
+            <i class="fas fa-search"></i>
+            <h5>Filing Navigation</h5>
+            <p>
+              Move across reports, notes, and disclosures without manually
+              scanning hundreds of pages.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="obs-feat-card">
+            <i class="fas fa-chart-line"></i>
+            <h5>Historical Tracking</h5>
+            <p>Track how signals evolve over time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== WHY OBSIGHT ===================== -->
+  <section id="why-obsight" class="obs-why">
     <div class="container">
-      <!-- BANNER-13 WRAPPER -->
-      <div class="banner-13-wrapper bg--03 bg--scroll r-16 block-shadow">
-        <div class="banner-overlay">
-          <div class="row d-flex align-items-center">
-            <!-- BANNER-13 TEXT -->
-            <div class="col-md-7">
-              <div class="banner-13-txt color--white">
-                <!-- Title -->
-                <a
-                  href="https://chat.whatsapp.com/IHWaQIPjSP91JNkCibIAB1"  target="_blank"
-                  class="s-46 w-700">Join Community</a
-                >
+      <div class="row align-items-center">
+        <!-- LEFT -->
+        <div class="col-lg-5 mb-5 mb-lg-0 text-center text-lg-start">
+          <span class="obs-badge">WHY OBSIGHT</span>
 
-                <!-- Text -->
-                <p class="p-lg">
-                  Be part of a growing community of investors. Share insights,
-                  learn together, and invest smarter with Shagun!
-                </p>
+          <h2 class="obs-section-title">
+            Structure the signal<br />
+            <span class="text-gradient">Verify with Evidence</span>
+          </h2>
 
-                <!-- Button -->
-                <a
-                  href="https://chat.whatsapp.com/IHWaQIPjSP91JNkCibIAB1" target="_blank"
-                  class="btn r-04 btn--theme hover--tra-white"
-                >
-                  Join Community
-                </a>
-              </div>
-            </div>
-            <!-- END BANNER-13 TEXT -->
+          <p class="obs-section-sub">
+            Most tools provide raw data but Obsight is being built to structure
+            observations directly from filings — so analysts can review
+            information, validate context, and form their own conclusions.
+          </p>
 
-            <!-- BANNER-13 IMAGE -->
-            <div class="col-md-5">
-              <div class="banner-13-img text-center">
-                <img
-                  class="img-fluid"
-                  src="images/community.svg"
-                  alt="banner-image"
-                />
-              </div>
-            </div>
-          </div>
-          <!-- End row -->
+          <ul class="obs-check-list">
+            <li>
+              <i class="fas fa-check"></i> Observations linked to source filings
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Signals surfaced across disclosures
+            </li>
+            <li>
+              <i class="fas fa-check"></i> No Black-Box Results — Fully Transparent
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Designed for analyst workflows
+            </li>
+          </ul>
         </div>
-        <!-- End banner overlay -->
-      </div>
-      <!-- END BANNER-13 WRAPPER -->
-    </div>
-    <!-- End container -->
-  </section>
-  <!-- END BANNER-13 -->
 
-  <!-- NEWSLETTER-1
-			============================================= -->
-  <section id="newsletter-1" class="newsletter-section">
-    <div class="newsletter-overlay">
-      <div class="container">
-        <div class="row d-flex align-items-center row-cols-1 row-cols-lg-2">
-          <!-- NEWSLETTER TEXT -->
-          <div class="col">
-            <div class="newsletter-txt">
-              <h4 class="s-26 w-700">
-                Get exclusive early access to Shagun and help shape the future
-                of stock research!
-              </h4>
+        <!-- RIGHT -->
+        <div class="col-lg-7">
+          <div class="obs-preview-panel">
+            <!-- Header -->
+            <div class="obs-panel__header">
+              <div>
+                <strong>XYZ Industries Ltd</strong>
+                <span>FY23 · Annual Report</span>
+              </div>
+              <span class="obs-signal obs-signal--amber"
+                >⚠ MULTIPLE SIGNALS</span
+              >
             </div>
-          </div>
 
-          <!-- NEWSLETTER FORM -->
-          <div class="col">
-            <form id="newsletter-form">
-              <div class="input-group">
-                <input
-                  type="email"
-                  autocomplete="off"
-                  class="form-control email2"
-                  placeholder="Your email address"
-                  required
-                  id="s-email"
-                />
-                <span class="input-group-btn">
-                  <button
-                    type="submit"
-                    class="btn btn--theme hover--theme joinBetaButton2"
-                    >Join Beta</button
-                  >
+            <!-- Data Grid -->
+            <div class="obs-panel__grid">
+              <div class="obs-panel__cell">
+                <span class="obs-panel__cell-label">Revenue</span>
+                <span
+                  class="obs-panel__cell-value obs-panel__cell-value--green"
+                >
+                  ₹1,240 Cr <small>↑32%</small>
                 </span>
               </div>
 
-              <!-- Newsletter Form Notification -->
-              <label
-                for="s-email"
-                class="form-notification text-success"
-                id="request-form-success-msg2"></label>
-            </form>
+              <div class="obs-panel__cell">
+                <span class="obs-panel__cell-label">Op. Cash Flow</span>
+                <span class="obs-panel__cell-value obs-panel__cell-value--red">
+                  ₹86 Cr <small>↓18%</small>
+                </span>
+              </div>
+
+              <div class="obs-panel__cell">
+                <span class="obs-panel__cell-label">Receivables</span>
+                <span class="obs-panel__cell-value obs-panel__cell-value--red">
+                  ₹410 Cr <small>↑47%</small>
+                </span>
+              </div>
+
+              <div class="obs-panel__cell">
+                <span class="obs-panel__cell-label">Source</span>
+                <span class="obs-panel__cell-value"> AR FY23</span>
+              </div>
+            </div>
+
+            <!-- Observations -->
+            <div class="obs-panel__block">
+              <span class="obs-terminal__tag">OBSERVATIONS</span>
+              <ul>
+                <li>Receivables growing faster than revenue</li>
+                <li>Cash flow trends not aligned with reported profit</li>
+                <li>Increase in "Other Current Assets"</li>
+              </ul>
+            </div>
+
+            <!-- Context -->
+            <div class="obs-panel__block obs-panel__block--insight">
+              <span class="obs-terminal__tag">CONTEXT</span>
+              <p>
+                These patterns may require further analysis of receivables and
+                cash flow quality.
+              </p>
+            </div>
+
+            <!-- Source -->
+            <div class="obs-source-block">
+              <span class="obs-source-tag">SOURCE</span>
+              <p>
+                AR FY23 → Receivables (Pg.118) · Cash Flow (Pg.92) · Notes
+                (Pg.134)
+              </p>
+            </div>
           </div>
         </div>
-        <!-- END NEWSLETTER FORM -->
       </div>
-      <!-- End row -->
     </div>
-    <!-- End container -->
   </section>
-  <!-- End newsletter-overlay -->
+
+  <!-- ===================== CTA / FOUNDING ACCESS ===================== -->
+  <section id="waitlist" class="obs-cta">
+    <div class="container">
+      <div class="obs-cta__card">
+        <!-- HEADER -->
+        <div class="obs-cta__header text-center">
+          <span class="obs-badge obs-badge--linear">
+            FOUNDING ANALYST PROGRAM
+          </span>
+
+          <h2 class="obs-cta__heading">
+            Shape the future of forensic analysis.
+          </h2>
+
+          <p class="obs-cta__sub">
+            Join our Founding Analyst Program to work directly with Founders,
+            influence the product roadmap, and secure early priority access.
+          </p>
+        </div>
+
+        <!-- MAIN -->
+        <div class="obs-cta__main">
+          <!-- LEFT: PRODUCT -->
+          <div class="obs-cta__preview">
+            <div class="obs-terminal-preview">
+              <!-- HEADER -->
+              <div class="obs-terminal__header">
+                <div class="obs-terminal__title">
+                  <span>Listed Company</span>
+                  <span class="obs-terminal__subtitle"
+                    >NSE: Listed · Large Cap Conglomerate</span
+                  >
+                </div>
+                <span class="obs-signal obs-signal--red"
+                  >⚠ CASH FLOW DEFICIT</span
+                >
+              </div>
+              <!-- METRICS -->
+              <div class="obs-signal-block">
+                <div class="obs-metric">
+                  <span>EBITDA Growth</span>
+                  <span class="green">+22%</span>
+                </div>
+                <div class="obs-metric">
+                  <span>Reported PAT</span>
+                  <span class="green">+18%</span>
+                </div>
+                <div class="obs-metric">
+                  <span>Operating Cash Flow (OCF)</span>
+                  <span class="red">-34%</span>
+                </div>
+                <div class="obs-metric">
+                  <span>Unallocated CapEx</span>
+                  <span class="amber">+68%</span>
+                </div>
+              </div>
+              <!-- INSIGHT -->
+              <div class="obs-insight-block">
+                <span class="obs-terminal__tag">INSIGHT</span>
+                <p>
+                  EBITDA growth of 22% is not converting to operational cash.
+                  Significant OCF drag (-34%) driven by working capital lockups
+                  in the retail segment. Simultaneously, unallocated CapEx has
+                  spiked without direct revenue mapping.
+                </p>
+              </div>
+              <!-- MANAGEMENT SIGNAL -->
+              <div class="obs-risk-block">
+                <span class="obs-terminal__tag obs-terminal__tag--red"
+                  >MANAGEMENT SIGNAL</span
+                >
+                <p>
+                  Management commentary in Q3 call heavily emphasized free cash
+                  flow generation. The actual FY23 cash flow statement
+                  explicitly contradicts this, showing expanding working capital
+                  cycles.
+                </p>
+              </div>
+              <!-- FORWARD RISK -->
+              <div class="obs-risk-block subtle">
+                <span class="obs-terminal__tag obs-terminal__tag--amber"
+                  >FORWARD RISK</span
+                >
+                <p>
+                  Continuous debt-funded CapEx into non-core segments while core
+                  operating cash flow contracts poses a systemic liquidity risk
+                  over next 18-24 months if retail margins compress.
+                </p>
+              </div>
+              <!-- SOURCE -->
+              <div class="obs-source-block">
+                <span class="obs-source-tag">SOURCE</span>
+                <p>
+                  FY23 Integrated Annual Report · Statement of Cash Flows (Pg.
+                  214) · Notes to Consolidated Accounts – Segment Reporting (Pg.
+                  268) · Q3 Earnings Transcript
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: OFFER -->
+          <div class="obs-cta__offer">
+            <div class="obs-cta__offer-box">
+              <div class="obs-cta__price-header">
+                <div class="obs-cta__price">₹50,000</div>
+                <div class="obs-cta__price-label">
+                  Founding Member Contribution
+                </div>
+              </div>
+              <p>✔ 1-Year Full Access</p>
+              <p>✔ 3-Year Pricing Lock (50% lower)</p>
+              <p>✔ Direct Product Access & Feedback</p>
+            </div>
+
+            <p class="obs-cta__pressure">
+              This is not a subscription. It is early access to a system
+              designed to reduce blind spots in your analysis.
+            </p>
+            <p>
+              We are building Obsight with experienced analysts and investors —
+              working closely with people who understand equity markets deeply.
+            </p>
+
+            <!-- FORM -->
+            <form id="beta-form" class="obs-cta__form">
+              <div class="obs-cta__form-row">
+                <input
+                  type="text"
+                  class="input name1"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  class="input email1"
+                  placeholder="Work Email"
+                  required
+                />
+              </div>
+
+              <select class="input role1" required>
+                <option value="" disabled selected>Your Role</option>
+                <option>Equity Research Analyst</option>
+                <option>Investor / Family Office</option>
+                <option>Boutique Firm / Fund Manager</option>
+                <option>Independent Researcher</option>
+              </select>
+
+              <button type="submit" class="btn-premium joinBetaButton1">
+                Apply for Founding Access →
+              </button>
+              <p
+                id="request-form-success-msg1"
+                style="display: none; color: #10b981; font-size: 0.95rem; text-align: center; margin: 8px 0 0 0; font-weight: 600;"
+              >
+              </p>
+              <p class="obs-cta__disclaimer">
+                No payment required to apply. Billing only occurs if selected.
+              </p>
+            </form>
+
+            <div class="obs-cta__trust">
+              <span>Limited to 20 members</span>
+              <span>Access granted selectively</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
-<!-- END NEWSLETTER-1 -->
 
-<hr class="divider" />
-<style>
-  #modal-3.modal .bg-img {
-    background-image: url(../images/shagun/bot.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
-
+<!-- ===================== FORM SCRIPT ===================== -->
 <script>
-  // Import the required modules
-  import { CosmosClient } from "@azure/cosmos";
-  // Wait for the DOM to be ready
+const API_URL = "https://synax-api-d0bzbgepd6gkcuf9.centralindia-01.azurewebsites.net/api/submit-founding-access";
+  console.log(API_URL);
   document.addEventListener("DOMContentLoaded", function () {
-    // Get the form element
-    const form1 = document.querySelector("#beta-form") as HTMLFormElement;
-    const form2 = document.querySelector("#newsletter-form") as HTMLFormElement;
-    // Get the success message element
-    const successMessageElement1 = document.querySelector(
-      "#request-form-success-msg1"
-    ) as HTMLParagraphElement;
-    const successMessageElement2 = document.querySelector(
-      "#request-form-success-msg2"
+    const form = document.querySelector("#beta-form") as HTMLFormElement;
+    const successMsg = document.querySelector(
+      "#request-form-success-msg1",
     ) as HTMLParagraphElement;
 
-    // Add a submit event listener to the form
-    form1.addEventListener("submit", async function (event) {
-      // Prevent the default form submission
+    if (!form) return;
+
+    form.addEventListener("submit", async function (event) {
       event.preventDefault();
-      const joinBetaButton = document.querySelector(
-        ".joinBetaButton1"
-      ) as HTMLButtonElement;
-
-      // Get the input values
-      const emailInput = form1.querySelector(".email1") as HTMLInputElement;
-
-      // Retrieve the values
+      const btn = form.querySelector(".joinBetaButton1") as HTMLButtonElement;
+      const emailInput = form.querySelector(".email1") as HTMLInputElement;
+      const nameInput = form.querySelector(".name1") as HTMLInputElement;
+      const roleInput = form.querySelector(".role1") as HTMLSelectElement;
 
       const email = emailInput.value;
+      const name = nameInput ? nameInput.value : "name";
+      const role = roleInput && roleInput.value ? roleInput.value : "Unknown";
 
-      // Log the values
+      const originalBtnText = btn.innerHTML;
+      btn.innerHTML = `<div style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%;"><div style="display: flex; justify-content: flex-end; padding-right: 12px;"><svg class="obs-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg></div><span>Requesting...</span><div></div></div>`;
+      btn.disabled = true;
 
-      console.log("Email:", email);
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, role }),
+        });
 
-      // Create a Cosmos DB client instance
-      const cosmosClient = new CosmosClient({
-        endpoint: "https://synax-website-db.documents.azure.com:443/",
-        key: "MTuyAMnzjnvXfpTf1AX7uQlCxkqe4bdWuK0etCYc903vuRyTGlFvVUthOmillPFRfxzd6B99LfpZACDbzvMlag==",
-      });
+        const result = await response.json();
 
-      // Define the database and container ID
-      const databaseId = "SYNAX_WEBSITE";
-      const containerId = "BETA_JOIN_WAITLIST";
+        // Handle duplicate email
+        if (result.status === "duplicate") {
+          if (successMsg) {
+            successMsg.textContent = result.message;
+            successMsg.style.display = "block";
+            successMsg.style.color = "#facc15";
+          }
+          btn.innerHTML = originalBtnText;
+          btn.disabled = false;
 
-      // Create a database if it doesn't exist
-      const { database } = await cosmosClient.databases.createIfNotExists({
-        id: databaseId,
-      });
-
-      // Create a container if it doesn't exist
-      const { container } = await database.containers.createIfNotExists({
-        id: containerId,
-      });
-
-      // Create an item (document) in the container
-      const item = {
-        name: "name",
-        email: email,
-        reason: "reason",
-      };
-
-      const { resource: createdItem } = await container.items.create(item);
-
-      // Log the created item
-      console.log("Item created:", createdItem);
-
-      if (createdItem.name) {
-        // Show the success message
-        if (successMessageElement1) {
-          successMessageElement1.textContent =
-            "Your request has been received. Thank you! We will reach out to you soon.";
-          successMessageElement1.style.display = "block"; // Ensure visibility
+          const clearErr = () => {
+            if (
+              successMsg &&
+              successMsg.textContent.includes("already registered")
+            ) {
+              successMsg.style.display = "none";
+            }
+            emailInput.removeEventListener("input", clearErr);
+          };
+          emailInput.addEventListener("input", clearErr);
+          return;
         }
 
-        // Hide the join beta button
-        if (joinBetaButton) {
-          joinBetaButton.disabled = true; // Disable button
-          joinBetaButton.textContent = "Submitted"; // Update button text
+        // Handle validation errors
+        if (result.status === "error") {
+          if (successMsg) {
+            successMsg.textContent = result.message;
+            successMsg.style.display = "block";
+            successMsg.style.color = "#f87171";
+          }
+          btn.innerHTML = originalBtnText;
+          btn.disabled = false;
+          return;
         }
 
-        if (emailInput) {
-          emailInput.disabled = true; // Disable input field
+        // Handle success
+        if (result.status === "success") {
+          if (successMsg) {
+            successMsg.textContent = result.message;
+            successMsg.style.display = "block";
+            successMsg.style.color = "#10b981";
+          }
+          btn.textContent = "Access Requested ✓";
+          emailInput.disabled = true;
+          if (nameInput) nameInput.disabled = true;
         }
-      }
-    });
-    // Add a submit event listener to the form
-    form2.addEventListener("submit", async function (event) {
-      // Prevent the default form submission
-      event.preventDefault();
-      const joinBetaButton = document.querySelector(
-        ".joinBetaButton2"
-      ) as HTMLButtonElement;
-
-      // Get the input values
-      const emailInput = form2.querySelector(".email2") as HTMLInputElement;
-
-      // Retrieve the values
-
-      const email = emailInput.value;
-
-      // Log the values
-
-      console.log("Email:", email);
-
-      // Create a Cosmos DB client instance
-      const cosmosClient = new CosmosClient({
-        endpoint: "https://synax-website-db.documents.azure.com:443/",
-        key: "MTuyAMnzjnvXfpTf1AX7uQlCxkqe4bdWuK0etCYc903vuRyTGlFvVUthOmillPFRfxzd6B99LfpZACDbzvMlag==",
-      });
-
-      // Define the database and container ID
-      const databaseId = "SYNAX_WEBSITE";
-      const containerId = "BETA_JOIN_WAITLIST";
-
-      // Create a database if it doesn't exist
-      const { database } = await cosmosClient.databases.createIfNotExists({
-        id: databaseId,
-      });
-
-      // Create a container if it doesn't exist
-      const { container } = await database.containers.createIfNotExists({
-        id: containerId,
-      });
-
-      // Create an item (document) in the container
-      const item = {
-        name: "name",
-        email: email,
-        reason: "reason",
-      };
-
-      const { resource: createdItem } = await container.items.create(item);
-
-      // Log the created item
-      console.log("Item created:", createdItem);
-
-      if (createdItem.name) {
-        // Show the success message
-        if (successMessageElement2) {
-          successMessageElement2.textContent =
-            "Your request has been received. Thank you! We will reach out to you soon.";
-          successMessageElement2.style.display = "block"; // Ensure visibility
-        }
-
-        // Hide the join beta button
-        if (joinBetaButton) {
-          joinBetaButton.disabled = true; // Disable button
-          joinBetaButton.textContent = "Submitted"; // Update button text
-        }
-
-        if (emailInput) {
-          emailInput.disabled = true; // Disable input field
-        }
+      } catch (err) {
+        console.error("Submission error", err);
+        btn.textContent = "Try Again";
+        btn.disabled = false;
       }
     });
   });
 </script>
+
+<!-- ===================== SCOPED STYLES ===================== -->
+<style>
+  .obs-terminal-preview {
+    background: #020617;
+    border-radius: 14px;
+    padding: 24px;
+    color: #f8fafc;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    font-family: inherit;
+    overflow: hidden;
+  }
+
+  /* HEADER */
+  .obs-terminal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 10px;
+  }
+
+  .obs-terminal__title {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+
+  .obs-terminal__subtitle {
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  /* SIGNAL BLOCK */
+  .obs-signal-block {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  /* CTA section metric (dark panel rows) */
+  .obs-signal-block .obs-metric {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: 8px 0;
+    font-family: inherit;
+  }
+  .obs-signal-block .obs-metric span:first-child {
+    color: #d1d5db;
+  }
+
+  /* COLORS */
+  .green {
+    color: #4ade80;
+  }
+  .red {
+    color: #f87171;
+  }
+  .amber {
+    color: #facc15;
+  }
+
+  /* INSIGHT & RISK */
+  .obs-insight-block {
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 16px 20px;
+    border-radius: 12px;
+  }
+  .obs-insight-block p,
+  .obs-risk-block p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #f8fafc;
+    margin: 8px 0 0 0;
+    font-family: system-ui, sans-serif;
+  }
+  .obs-risk-block {
+    border-left: 3px solid #f87171;
+    padding-left: 16px;
+    padding-bottom: 24px;
+  }
+  .obs-risk-block.subtle {
+    border-left: 3px solid #facc15;
+  }
+
+  /* UNIFIED SOURCE FOOTER */
+  .obs-source-block {
+    padding: 14px 20px;
+    background: var(--bg-tertiary);
+  }
+  .obs-terminal__body .obs-source-block {
+    margin: 0 -20px -20px -20px;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+  .obs-terminal-preview .obs-source-block {
+    margin: -20px -24px -24px -24px;
+    border-radius: 0 0 14px 14px;
+    position: relative;
+    z-index: 2;
+  }
+  .obs-preview-panel .obs-source-block {
+    margin: 0;
+  }
+  .obs-source-block p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 6px 0 0 0;
+    line-height: 1.5;
+    font-family: "SF Mono", "Fira Code", monospace;
+  }
+  .obs-source-tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background: rgba(37, 99, 235, 0.08); /* light blue */
+    color: var(--brand-accent); /* dark blue text */
+  }
+
+  /* MOBILE: CTA stack */
+  @media (max-width: 768px) {
+    .obs-cta__main {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ============================================
+     HERO
+     ============================================ */
+  .obs-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 140px 0 100px;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .obs-hero__grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+        rgba(37, 99, 235, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    z-index: 0;
+  }
+  .obs-hero__heading {
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 1.08;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.035em;
+    animation: fade-up 0.7s ease-out both;
+  }
+  .obs-hero__sub {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin-bottom: 2rem;
+    animation: fade-up 0.7s ease-out 0.1s both;
+  }
+  .obs-hero__cta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    animation: fade-up 0.7s ease-out 0.2s both;
+  }
+  .obs-hero__trust {
+    display: flex;
+    gap: 20px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    animation: fade-up 0.7s ease-out 0.3s both;
+  }
+  .obs-hero__trust span {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .obs-hero__trust i {
+    color: var(--brand-accent);
+    font-size: 0.8rem;
+  }
+  .obs-link-outline {
+    display: inline-block;
+    padding: 2px 0;
+    border: none;
+    background: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  /* underline animation */
+  .obs-link-outline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 1px;
+    background: var(--brand-accent);
+    transition: width 0.25s ease;
+  }
+
+  .obs-link-outline:hover {
+    color: var(--brand-accent);
+  }
+
+  .obs-link-outline:hover::after {
+    width: 100%;
+  }
+
+  /* --- Hero Terminal Preview --- */
+  .obs-hero-terminal {
+    background: var(--bg-dark);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
+    animation: fade-up 0.7s ease-out 0.15s both;
+  }
+  .obs-terminal__bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .obs-terminal__title {
+    margin-left: 8px;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .obs-terminal__body {
+    padding: 18px;
+    font-size: 0.82rem;
+  }
+  .obs-terminal__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+  }
+  .obs-terminal__row--header {
+    padding-bottom: 8px;
+  }
+  .obs-terminal__row--header span:first-child {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .obs-terminal__label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.82rem;
+  }
+  .obs-terminal__val {
+    font-weight: 700;
+    font-size: 0.85rem;
+    font-family: "SF Mono", "Fira Code", monospace;
+  }
+  .obs-terminal__val--green {
+    color: #4ade80;
+  }
+  .obs-terminal__val--red {
+    color: #f87171;
+  }
+  .obs-terminal__divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    margin: 8px 0;
+  }
+  .obs-terminal__section {
+    padding: 8px 0;
+  }
+  .obs-terminal__section p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 8px 0 0;
+  }
+  /* --- Tags (canonical) --- */
+  .obs-terminal__tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .obs-terminal__tag--blue {
+    background: rgba(37, 99, 235, 0.15);
+    color: #60a5fa;
+  }
+  .obs-terminal__tag--red {
+    background: rgba(248, 113, 113, 0.15);
+    color: #f87171;
+  }
+  .obs-terminal__tag--amber {
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+  }
+
+  /* --- Signal Badge (canonical) --- */
+  .obs-signal {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .obs-signal--red {
+    background: rgba(248, 113, 113, 0.15);
+    color: #f87171;
+  }
+  .obs-signal--amber {
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+  }
+  .obs-signal--green {
+    background: rgba(74, 222, 128, 0.15);
+    color: #4ade80;
+  }
+
+  /* ============================================
+     SHARED
+     ============================================ */
+  .obs-badge {
+    display: inline-block;
+    background: var(--brand-accent-light);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    color: var(--brand-accent);
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+  }
+  .obs-badge--glow {
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.1);
+  }
+  .obs-badge--accent {
+    background: var(--brand-accent);
+    color: #ffffff;
+    border-color: var(--brand-accent);
+  }
+  .obs-section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.12;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.03em;
+  }
+  .obs-section-sub {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 640px;
+  }
+
+  /* ============================================
+     PROBLEM
+     ============================================ */
+  .obs-problem {
+    padding: 100px 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .obs-problem-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    height: 100%;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 3px solid var(--signal-red);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+  .obs-problem-card--warn {
+    border-left: 3px solid var(--signal-amber);
+    background: #fffbeb;
+  }
+  .obs-problem-card:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: var(--signal-red);
+  }
+  .obs-problem-card--warn:hover {
+    border-color: var(--signal-amber);
+  }
+  .obs-problem-card__metric {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    font-family: "SF Mono", "Fira Code", monospace;
+    letter-spacing: -0.02em;
+  }
+  .obs-problem-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .obs-problem-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ============================================
+     FEATURES
+     ============================================ */
+  .obs-features {
+    padding: 100px 0;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  /* Hero Feature */
+  .obs-feature-hero {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    border-left: 3px solid var(--brand-accent);
+  }
+  .obs-feature-hero__title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+  }
+  .obs-feature-hero__desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+  .obs-feature-hero__signals {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .obs-signal-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+
+  /* Feature Preview */
+  .obs-feature-hero__preview {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .obs-data-block {
+    background: #020617;
+    border-radius: var(--radius-md, 14px);
+    padding: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  }
+  .obs-data-block--highlight {
+    border-left: 3px solid var(--signal-red);
+  }
+  .obs-data-block__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .obs-data-block__label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    text-transform: uppercase;
+  }
+  .obs-data-block__badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: rgba(37, 99, 235, 0.15);
+    color: #60a5fa;
+  }
+  .obs-data-block__content {
+    font-size: 0.88rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .obs-data-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  /* Features section metric (grid cells) */
+  .obs-metric {
+    text-align: center;
+  }
+  .obs-metric__label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .obs-metric__value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: "SF Mono", "Fira Code", monospace;
+    color: #f8fafc;
+  }
+  .obs-metric__value--green {
+    color: var(--signal-green) !important;
+  }
+  .obs-metric__value--red {
+    color: var(--signal-red) !important;
+  }
+
+  /* Secondary Feature Cards */
+  .obs-feat-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    height: 100%;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+  .obs-feat-card:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: rgba(37, 99, 235, 0.2);
+  }
+  .obs-feat-card i {
+    font-size: 1.1rem;
+    color: var(--brand-accent);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .obs-feat-card h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .obs-feat-card p {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ============================================
+     WHY OBSIGHT
+     ============================================ */
+  .obs-why {
+    padding: 100px 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .obs-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+  }
+  .obs-check-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+  }
+  .obs-check-list i {
+    color: var(--signal-green);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  /* Preview Panel */
+  .obs-preview-panel {
+    background: #020617;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+  }
+  .obs-panel__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .obs-panel__header strong {
+    font-size: 1rem;
+    display: block;
+    color: #f8fafc;
+  }
+  .obs-panel__header span:not(.obs-signal) {
+    font-size: 0.76rem;
+    color: #94a3b8;
+    margin-top: 2px;
+    display: block;
+  }
+  .obs-panel__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .obs-panel__cell {
+    padding: 14px 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+  }
+  .obs-panel__cell:last-child {
+    border-right: none;
+  }
+  .obs-panel__cell-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .obs-panel__cell-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: "SF Mono", "Fira Code", monospace;
+    color: #f8fafc;
+  }
+  .obs-panel__cell-value small {
+    font-size: 0.72rem;
+    margin-left: 2px;
+  }
+  .obs-panel__cell-value--green {
+    color: var(--signal-green) !important;
+  }
+  .obs-panel__cell-value--green small {
+    color: var(--signal-green) !important;
+  }
+  .obs-panel__cell-value--red {
+    color: var(--signal-red) !important;
+  }
+  .obs-panel__cell-value--red small {
+    color: var(--signal-red) !important;
+  }
+
+  .obs-panel__block {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .obs-panel__block--insight {
+    background: rgba(59, 130, 246, 0.08);
+  }
+  .obs-panel__block ul {
+    padding-left: 16px;
+    margin: 8px 0 0;
+  }
+  .obs-panel__block li {
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    margin-bottom: 6px;
+    line-height: 1.55;
+  }
+  .obs-panel__block p {
+    font-size: 0.88rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin: 8px 0 0;
+  }
+
+  /* ============================================
+     HOW IT WORKS
+     ============================================ */
+  .obs-how {
+    padding: 100px 0;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .obs-workflow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+  }
+  .obs-workflow__step {
+    flex: 1;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 28px 22px;
+    transition: all 0.25s ease;
+  }
+  .obs-workflow__step:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+  .obs-workflow__step--active {
+    border-color: var(--brand-accent);
+    border-left: 3px solid var(--brand-accent);
+    background: var(--bg-primary);
+  }
+  .obs-workflow__connector {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .obs-workflow__connector::before {
+    content: "→";
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+  .obs-workflow__num {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--brand-accent);
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    font-family: "SF Mono", "Fira Code", monospace;
+  }
+  .obs-workflow__content h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .obs-workflow__content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .obs-workflow__snippet {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+  }
+  .obs-workflow__snippet code {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    font-family: "SF Mono", "Fira Code", monospace;
+  }
+  .obs-workflow__snippet--signal {
+    border-left: 2px solid var(--signal-amber);
+  }
+  .obs-workflow__snippet--signal code {
+    color: var(--signal-amber);
+  }
+
+  /* ============================================
+     CTA / WAITLIST (PREMIUM CARD - LIGHT MODE)
+     ============================================ */
+  .obs-cta {
+    padding: 120px 0 140px;
+    background: var(--bg-primary);
+    position: relative;
+    border-top: 1px solid var(--border-color);
+  }
+
+  /* Background subtle glow */
+  .obs-cta::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(
+      circle,
+      rgba(37, 99, 235, 0.05) 0%,
+      transparent 60%
+    );
+    pointer-events: none;
+  }
+
+  .obs-cta__card {
+    max-width: 1340px;
+    margin: 0 auto;
+    background-color: var(--bg-primary, #ffffff);
+    background-image: radial-gradient(
+        circle at top right,
+        rgba(37, 99, 235, 0.05) 0%,
+        transparent 60%
+      ),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 32px 32px, 32px 32px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    padding: 56px 64px;
+    box-shadow: 0 40px 80px -20px rgba(37, 99, 235, 0.1),
+      0 10px 30px -10px rgba(0, 0, 0, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Grid Setup for Desktop */
+
+  /* Top glowing line */
+  .obs-cta__card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(37, 99, 235, 0.3),
+      transparent
+    );
+  }
+
+  /* Header */
+  .obs-cta__header {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .obs-cta__header .obs-badge--linear {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--brand-accent);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .obs-cta__heading {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+  }
+  .obs-cta__sub {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Form */
+  .obs-cta__form {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Mobile padding & box shadow fallback for form when stacked */
+  @media (max-width: 992px) {
+    .obs-cta__form {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.05);
+    }
+    .obs-cta__badges {
+      border-top: 1px solid var(--border-color);
+      padding-top: 32px;
+    }
+  }
+
+  .obs-cta__form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .obs-cta__form input,
+  .obs-cta__form select {
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    color: #0f172a;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .obs-cta__form select {
+    margin-bottom: 20px;
+  }
+  .obs-cta__form input:hover,
+  .obs-cta__form select:hover {
+    background: #ffffff;
+    border-color: #cbd5e1;
+  }
+  .obs-cta__form input:focus,
+  .obs-cta__form select:focus {
+    background: #ffffff;
+    border-color: var(--brand-accent);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1),
+      inset 0 1px 2px rgba(0, 0, 0, 0.02);
+  }
+  .obs-cta__form input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+  }
+
+  /* Select styling */
+  .obs-cta__form select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.2rem center;
+    background-size: 1.1em;
+    padding-right: 2.8rem;
+    cursor: pointer;
+  }
+  .obs-cta__form select option {
+    color: var(--text-primary);
+  }
+
+  /* Premium Button */
+  .obs-cta__form .btn-premium {
+    width: 100%;
+    padding: 0 16px;
+    height: 58px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 12px;
+    color: #fff;
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 0.2px;
+    box-sizing: border-box;
+  }
+  .obs-cta__form .btn-premium:hover {
+    transform: translateY(-2px);
+    background: #1e293b;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+  }
+  .obs-cta__form .btn-premium:active {
+    transform: translateY(0);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .obs-cta__form .btn-premium:disabled {
+    cursor: wait;
+    opacity: 0.8;
+  }
+
+  /* BUTTON SPINNER */
+  .obs-spinner {
+    animation: obs-rotate 2s linear infinite;
+    width: 20px;
+    height: 20px;
+  }
+  .obs-spinner .path {
+    stroke: rgba(255, 255, 255, 0.85);
+    stroke-linecap: round;
+    animation: obs-dash 1.5s ease-in-out infinite;
+  }
+  @keyframes obs-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes obs-dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+
+  .obs-cta__disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* ============================================
+     CTA LAYOUT
+     ============================================ */
+  .obs-cta__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 56px;
+  }
+
+  .obs-cta__offer-box {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+  .obs-cta__offer-box p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .obs-cta__offer-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .obs-cta__price-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0 0 16px 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .obs-cta__price {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+  }
+
+  .obs-cta__price-label {
+    font-size: 0.9rem;
+    color: var(--brand-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .obs-cta__pressure {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 32px;
+    border-left: 3px solid var(--signal-amber);
+    padding-left: 16px;
+  }
+
+  .obs-cta__trust {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .obs-cta__trust span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 992px) {
+    .obs-hero {
+      padding: 120px 0 80px;
+    }
+    .obs-hero__heading {
+      font-size: 2.8rem;
+    }
+    .obs-hero-terminal {
+      margin-top: 40px;
+    }
+    .obs-section-title {
+      font-size: 2rem;
+    }
+    .obs-cta__heading {
+      font-size: 2rem;
+    }
+    .obs-cta__price {
+      font-size: 2.2rem;
+    }
+    .obs-feature-hero {
+      padding: 28px;
+    }
+    .obs-data-metrics {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .obs-panel__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .obs-panel__cell:nth-child(2) {
+      border-right: none;
+    }
+    .obs-panel__cell:nth-child(1),
+    .obs-panel__cell:nth-child(2) {
+      border-bottom: 1px solid var(--border-color);
+    }
+    .obs-workflow {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .obs-workflow__connector {
+      width: auto;
+      height: 24px;
+    }
+    .obs-workflow__connector::before {
+      content: "↓";
+    }
+    .obs-problem,
+    .obs-features,
+    .obs-why,
+    .obs-how,
+    .obs-cta {
+      padding: 70px 0;
+    }
+    .obs-cta__card {
+      padding: 40px 32px;
+    }
+    .obs-cta__main {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+  @media (max-width: 576px) {
+    .obs-hero {
+      padding: 100px 0 60px;
+      text-align: center;
+    }
+    .obs-hero__heading {
+      font-size: 2.2rem;
+    }
+    .obs-hero__sub {
+      max-width: 100%;
+    }
+    .obs-hero__cta {
+      justify-content: center;
+    }
+    .obs-hero__trust {
+      justify-content: center;
+    }
+    .obs-cta__form-row {
+      grid-template-columns: 1fr;
+      margin-bottom: 0;
+      gap: 16px;
+    }
+    .obs-cta__form input,
+    .obs-cta__form select,
+    .obs-cta__form .btn-premium {
+      margin-bottom: 16px;
+    }
+    .obs-cta__card {
+      padding: 32px 16px;
+    }
+    .obs-section-title {
+      font-size: 1.7rem;
+    }
+    .obs-cta__heading {
+      font-size: 1.6rem;
+    }
+    .obs-cta__price {
+      font-size: 1.8rem;
+    }
+    .obs-terminal__header, .obs-terminal__row--header, .obs-panel__header {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .obs-data-metrics {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .obs-terminal-preview {
+      padding: 16px;
+    }
+    .obs-terminal-preview .obs-source-block {
+      margin: -16px -16px -16px -16px;
+    }
+  }
+
+</style>

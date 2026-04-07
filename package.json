@@ -10,9 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@azure/cosmos": "^4.0.0",
+    "@astrojs/sitemap": "^2.0.2",
     "astro": "^2.5.6",
-    "font-awesome": "^4.7.0",
-    "node": "^20.3.1"
+    "font-awesome": "^4.7.0"
   }
 }
