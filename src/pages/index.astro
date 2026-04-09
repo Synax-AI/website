@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
+import WaitlistForm from "../components/WaitlistForm.tsx";
 ---
 
 <Layout 
@@ -536,43 +537,8 @@ import Layout from "../layouts/Layout.astro";
               working closely with people who understand equity markets deeply.
             </p>
 
-            <!-- FORM -->
-            <form id="beta-form" class="obs-cta__form">
-              <div class="obs-cta__form-row">
-                <input
-                  type="text"
-                  class="input name1"
-                  placeholder="Your Name"
-                  required
-                />
-                <input
-                  type="email"
-                  class="input email1"
-                  placeholder="Work Email"
-                  required
-                />
-              </div>
-
-              <select class="input role1" required>
-                <option value="" disabled selected>Your Role</option>
-                <option>Equity Research Analyst</option>
-                <option>Investor / Family Office</option>
-                <option>Boutique Firm / Fund Manager</option>
-                <option>Independent Researcher</option>
-              </select>
-
-              <button type="submit" class="btn-premium joinBetaButton1">
-                Apply for Founding Access →
-              </button>
-              <p
-                id="request-form-success-msg1"
-                style="display: none; color: #10b981; font-size: 0.95rem; text-align: center; margin: 8px 0 0 0; font-weight: 600;"
-              >
-              </p>
-              <p class="obs-cta__disclaimer">
-                No payment required to apply. Billing only occurs if selected.
-              </p>
-            </form>
+            {/* FORM */}
+           <WaitlistForm client:only="react" />
 
             <div class="obs-cta__trust">
               <span>Limited to 20 members</span>
@@ -584,97 +550,6 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 </Layout>
-
-<!-- ===================== FORM SCRIPT ===================== -->
-<script>
-const API_URL = "https://synax-api-d0bzbgepd6gkcuf9.centralindia-01.azurewebsites.net/api/submit-founding-access";
-  console.log(API_URL);
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("#beta-form") as HTMLFormElement;
-    const successMsg = document.querySelector(
-      "#request-form-success-msg1",
-    ) as HTMLParagraphElement;
-
-    if (!form) return;
-
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const btn = form.querySelector(".joinBetaButton1") as HTMLButtonElement;
-      const emailInput = form.querySelector(".email1") as HTMLInputElement;
-      const nameInput = form.querySelector(".name1") as HTMLInputElement;
-      const roleInput = form.querySelector(".role1") as HTMLSelectElement;
-
-      const email = emailInput.value;
-      const name = nameInput ? nameInput.value : "name";
-      const role = roleInput && roleInput.value ? roleInput.value : "Unknown";
-
-      const originalBtnText = btn.innerHTML;
-      btn.innerHTML = `<div style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%;"><div style="display: flex; justify-content: flex-end; padding-right: 12px;"><svg class="obs-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg></div><span>Requesting...</span><div></div></div>`;
-      btn.disabled = true;
-
-      try {
-        const response = await fetch(API_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, role }),
-        });
-
-        const result = await response.json();
-
-        // Handle duplicate email
-        if (result.status === "duplicate") {
-          if (successMsg) {
-            successMsg.textContent = result.message;
-            successMsg.style.display = "block";
-            successMsg.style.color = "#facc15";
-          }
-          btn.innerHTML = originalBtnText;
-          btn.disabled = false;
-
-          const clearErr = () => {
-            if (
-              successMsg &&
-              successMsg.textContent.includes("already registered")
-            ) {
-              successMsg.style.display = "none";
-            }
-            emailInput.removeEventListener("input", clearErr);
-          };
-          emailInput.addEventListener("input", clearErr);
-          return;
-        }
-
-        // Handle validation errors
-        if (result.status === "error") {
-          if (successMsg) {
-            successMsg.textContent = result.message;
-            successMsg.style.display = "block";
-            successMsg.style.color = "#f87171";
-          }
-          btn.innerHTML = originalBtnText;
-          btn.disabled = false;
-          return;
-        }
-
-        // Handle success
-        if (result.status === "success") {
-          if (successMsg) {
-            successMsg.textContent = result.message;
-            successMsg.style.display = "block";
-            successMsg.style.color = "#10b981";
-          }
-          btn.textContent = "Access Requested ✓";
-          emailInput.disabled = true;
-          if (nameInput) nameInput.disabled = true;
-        }
-      } catch (err) {
-        console.error("Submission error", err);
-        btn.textContent = "Try Again";
-        btn.disabled = false;
-      }
-    });
-  });
-</script>
 
 <!-- ===================== SCOPED STYLES ===================== -->
 <style>
@@ -1573,158 +1448,6 @@ const API_URL = "https://synax-api-d0bzbgepd6gkcuf9.centralindia-01.azurewebsite
     margin: 0 auto;
   }
 
-  /* Form */
-  .obs-cta__form {
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Mobile padding & box shadow fallback for form when stacked */
-  @media (max-width: 992px) {
-    .obs-cta__form {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      padding: 32px;
-      border-radius: 20px;
-      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.05);
-    }
-    .obs-cta__badges {
-      border-top: 1px solid var(--border-color);
-      padding-top: 32px;
-    }
-  }
-
-  .obs-cta__form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-  .obs-cta__form input,
-  .obs-cta__form select {
-    width: 100%;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
-    color: #0f172a;
-    padding: 16px 20px;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-    outline: none;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .obs-cta__form select {
-    margin-bottom: 20px;
-  }
-  .obs-cta__form input:hover,
-  .obs-cta__form select:hover {
-    background: #ffffff;
-    border-color: #cbd5e1;
-  }
-  .obs-cta__form input:focus,
-  .obs-cta__form select:focus {
-    background: #ffffff;
-    border-color: var(--brand-accent);
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1),
-      inset 0 1px 2px rgba(0, 0, 0, 0.02);
-  }
-  .obs-cta__form input::placeholder {
-    color: #94a3b8;
-    font-weight: 400;
-  }
-
-  /* Select styling */
-  .obs-cta__form select {
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1.2rem center;
-    background-size: 1.1em;
-    padding-right: 2.8rem;
-    cursor: pointer;
-  }
-  .obs-cta__form select option {
-    color: var(--text-primary);
-  }
-
-  /* Premium Button */
-  .obs-cta__form .btn-premium {
-    width: 100%;
-    padding: 0 16px;
-    height: 58px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    border-radius: 12px;
-    color: #fff;
-    background: #0f172a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    letter-spacing: 0.2px;
-    box-sizing: border-box;
-  }
-  .obs-cta__form .btn-premium:hover {
-    transform: translateY(-2px);
-    background: #1e293b;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
-  }
-  .obs-cta__form .btn-premium:active {
-    transform: translateY(0);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
-  }
-  .obs-cta__form .btn-premium:disabled {
-    cursor: wait;
-    opacity: 0.8;
-  }
-
-  /* BUTTON SPINNER */
-  .obs-spinner {
-    animation: obs-rotate 2s linear infinite;
-    width: 20px;
-    height: 20px;
-  }
-  .obs-spinner .path {
-    stroke: rgba(255, 255, 255, 0.85);
-    stroke-linecap: round;
-    animation: obs-dash 1.5s ease-in-out infinite;
-  }
-  @keyframes obs-rotate {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes obs-dash {
-    0% {
-      stroke-dasharray: 1, 150;
-      stroke-dashoffset: 0;
-    }
-    50% {
-      stroke-dasharray: 90, 150;
-      stroke-dashoffset: -35;
-    }
-    100% {
-      stroke-dasharray: 90, 150;
-      stroke-dashoffset: -124;
-    }
-  }
-
-  .obs-cta__disclaimer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #64748b;
-    margin-top: 14px;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-
   /* ============================================
      CTA LAYOUT
      ============================================ */
@@ -1880,16 +1603,6 @@ const API_URL = "https://synax-api-d0bzbgepd6gkcuf9.centralindia-01.azurewebsite
     }
     .obs-hero__trust {
       justify-content: center;
-    }
-    .obs-cta__form-row {
-      grid-template-columns: 1fr;
-      margin-bottom: 0;
-      gap: 16px;
-    }
-    .obs-cta__form input,
-    .obs-cta__form select,
-    .obs-cta__form .btn-premium {
-      margin-bottom: 16px;
     }
     .obs-cta__card {
       padding: 32px 16px;
