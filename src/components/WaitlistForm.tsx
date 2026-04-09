@@ -108,7 +108,7 @@ export default function WaitlistForm() {
         <option>Independent Researcher</option>
       </select>
 
-      <div style={{ margin: '15px 0', display: 'flex', justifyContent: 'center' }}>
+      <div className="recaptcha-wrapper" style={{ margin: '15px 0', display: 'flex', justifyContent: 'center' }}>
         <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={RECAPTCHA_SITE_KEY}

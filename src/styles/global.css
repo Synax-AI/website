@@ -1,5 +1,10 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 :root {
@@ -43,6 +48,7 @@ body {
   color: var(--text-primary) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -255,6 +261,7 @@ p, span, li {
 
 .obs-cta__form input,
 .obs-cta__form select {
+  box-sizing: border-box;
   width: 100%;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -385,3 +392,12 @@ p, span, li {
   }
 }
 
+/* Fix ReCAPTCHA overflow on very small devices */
+@media (max-width: 450px) {
+  .recaptcha-wrapper {
+    transform: scale(0.85);
+    transform-origin: center center;
+    margin-left: -22px !important;
+    margin-right: -22px !important;
+  }
+}
