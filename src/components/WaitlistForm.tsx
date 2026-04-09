@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const API_URL = "https://synax-api-d0bzbgepd6gkcuf9.centralindia-01.azurewebsites.net/api/submit-founding-access";
-const RECAPTCHA_SITE_KEY = "6LcUx64sAAAAACEcLsjrNUeiS3L6VgLbA4x1VAu9"; 
+const RECAPTCHA_SITE_KEY = "6Ld01K4sAAAAAOPfvXRzTCaj60PVlxgZGiQvLRh2"; 
 
 export default function WaitlistForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error' | 'duplicate'>('idle');
